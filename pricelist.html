@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no">
-    <title>Daftar Harga | Suzuki Daya Kharisma Utama</title>
+    <title>Daftar Harga - Suzuki Daya Kharisma Utama</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="/navbar.css">
 
 
     <style>
@@ -34,49 +33,47 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <header class="fixed z-40">
 
-        <nav id="navbar"
-            class="navbar container-neu hero flex items-center justify-between flex-wrap p-6 fixed w-full z-10 pin-t">
-            <div class="flex items-center flex-no-shrink text-white mr-6" class="navbar-toggle" data-toggle="collapse"
-                data-target="#myNavbar">
-                <a class="text-white no-underline hover:text-white hover:no-underline" href="index.html">
+    <nav id="header" class="fixed bg-transparent text-white w-full z-20 top-0">
+        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-px">
+            <div class="block pl-8 p-2 pt-px">
+                <a class="text-dark no-underline hover:text-white hover:no-underline" href="https://dku.id">
                     <img src="img/favicon.svg" alt="Suzuki DKU" style="width: 100px;">
                 </a>
             </div>
-
-            <div class="block lg:hidden">
-                <button id="nav-toggle"
-                    class="flex items-center px-3 py-2 border rounded text-grey-600 border-grey-800 hover:text-indigo-600 hover:border-indigo-800">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
+            <div class="block lg:hidden pr-4">
+                <div id="animate-toogle" class="flex">
+                    <label for="check">
+                        <input type="checkbox" id="check"/> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
             </div>
-
-            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="myNavbar">
-                <ul class="list-reset lg:flex justify-end flex-1 items-right float-right">
+            <div class="w-full flex-grow p-4 lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-black md:bg-transparent z-20"
+                id="nav-content">
+                <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn active" href="#carousel">Beranda</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="./">Beranda</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">Model</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="./index.html">Model</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">Bandingkan Model</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="./index.html#model">Bandingkan Model</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn" href="index.html">Hubungi Kami</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="./index.html#contact">Hubungi Kami</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn" href="pricelist.html">Daftar Harga</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="pricelist.html">Daftar Harga</a>
                     </li>
                 </ul>
             </div>
-
-        </nav>
-    </header>
+        </div>
+        <div id="progress" class="h-1 z-40 top-0" style="background:linear-gradient(to right, rgba(224, 231, 255) var(--scroll), transparent 0);"></div>
+    </nav>
 
     <section id="carousel" class="bg-base-200 pt-20 md:pt-0" data-theme="emerald">
 
@@ -521,10 +518,10 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="js/aos.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
     <script>
         $(function () {
             AOS.init();
@@ -536,24 +533,60 @@
     </script>
 
     <script>
-        //Javascript to toggle the menu
-        document.getElementById('nav-toggle').onclick = function () {
-            document.getElementById("myNavbar").classList.toggle("hidden");
+        document.getElementById('check').onclick = function () {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+
+        document.getElementById('a-nav').onclick = function () {
+            document.getElementById("check").click();
         }
     </script>
+
+    <script>
+        var h = document.documentElement,
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight',
+        progress = document.querySelector('#progress'),
+        scroll;
+        var scrollpos = window.scrollY;
+        var header = document.getElementById("header");
+        var navcontent = document.getElementById("nav-content");
+
+
+        document.addEventListener('scroll', function () { 
+            scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+            progress.style.setProperty('--scroll', scroll + '%');
+            scrollpos = window.scrollY;
+
+            if (scrollpos > 10) {
+                header.classList.add("bg-gray-100");
+                navcontent.classList.remove("bg-gray-100");
+                navcontent.classList.add("bg-gray-100");
+            } else {
+                header.classList.remove("bg-gray-100");
+                navcontent.classList.remove("bg-gray-100");
+                navcontent.classList.add("bg-gray-100");
+
+            }
+
+        });
+
+    </script>                                           
 
     <script>
         // Add scrollspy to <body>
         $('body').scrollspy({
             target: ".navbar",
-            offset: 100
+            offset: 150
         });
 
         // Add smooth scrolling on all links inside the navbar
-        $("#myNavbar a").on('click', function (event) {
+        $("#header a").on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
+
 
                 // Prevent default anchor click behavior
                 event.preventDefault();
@@ -576,53 +609,11 @@
         });
     </script>
 
-    <!-- Script Navbar Glasss HP-->
-    <script>
-        if ($(window).width() <= 475) {
-            window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                
-                document.getElementById("navbar").style.background = "#F3F4F6";
-                document.getElementById("navbar").style.color = "#4B5563";
-            } else  {
-                document.getElementById("navbar").style.background = "none";
-                document.getElementById("navbar").style.color = "#111827";
-                
-            }
-        }
-    }
-    </script>
-
-    <!-- Script Navbar Glasss PC -->
-    <script>
-        if ($(window).width() >= 479) {
-            window.onscroll = function () {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    
-                    document.getElementById("navbar").style.background = "#F3F4F6";
-                    document.getElementById("navbar").style.color = "#4B5563";
-                } else {
-                    document.getElementById("navbar").style.background = "none";
-                    document.getElementById("navbar").style.color = "#111827";
-
-                }
-            }
-        }
-    </script>
-
     <!-- Crunchify's Scroll to Top Script -->
     <script>
         jQuery(document).ready(function () {
-            var offset = 500;
-            var duration = 500;
+            const offset = 500;
+            const duration = 500;
             jQuery(window).scroll(function () {
                 if (jQuery(this).scrollTop() > offset) {
                     jQuery('.crunchify-top').fadeIn(duration);
