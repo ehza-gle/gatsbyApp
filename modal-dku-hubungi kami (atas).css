@@ -1,0 +1,84 @@
+.modal-dku,
+.modal-dku .pesan ,
+.modal-dku .pesan .close,
+.modal-dku .buttons
+{
+  position: absolute;
+}
+.modal-dku .pesan,
+.modal-dku .buttons
+{
+  left: 0;
+  right: 0
+}
+.modal-dku
+{
+  background-color: #3b4960;
+  width: 700px;
+  height: 350px;
+  top:30%;
+  left: 50%;
+  transform: translate(-50%)
+}
+.modal-dku .pesan 
+{
+  margin: 0 auto;
+  width: 580px;
+  height: 100%;
+  background-color:#24d393;
+  top: -137px;
+}
+.modal-dku, .pesan
+{
+  border-radius:20px
+}
+.modal-dku .pesan .close
+{
+  top: 6px;
+  right: 6px;
+  font-size: 30px;
+  background-color: #1bc59b;
+  color: #FFF;
+  border-radius:50%;;
+  text-decoration: none;;
+  font-weight: bold;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+
+}
+.modal-dku .pesan i, h2, p
+{
+  text-align: center;
+  margin-top: 80px;
+  color: #FFF;
+  padding: 5px
+
+}
+.modal-dku .pesan h2, p {margin: 0;}
+.modal-dku .pesan i{ display: block; }
+.modal-dku .pesan h2{font-size: 50px}
+.modal-dku .pesan p{ font-size: 25px}
+
+.modal-dku .buttons
+{
+  bottom: 40px;
+  text-align: center;
+}
+.modal-dku .buttons button:first-child,
+.modal-dku .buttons button:last-child
+{
+  background-color: #6c83a2;
+  border: none;
+  color: #FFF;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 30px;
+  width: 230px;
+  margin-right: 10px;
+  font-family: arial
+}
+.modal-dku .buttons button:last-child
+{
+  background-color: #ff8e49
+}
