@@ -1,0 +1,475 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+
+    <title>Under Constraction Site</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+        * {
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #attribution a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        }
+
+        
+        .cool-slider {
+            width: 100%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            transform-style: preserve-3d;
+            width: 600px;
+            height: 300px;
+            top: calc(50% - 150px);
+            left: calc(50% - 300px);
+            transition: all 1.5s ease;
+            -webkit-transition: all 1.5s ease;
+            position: absolute;
+        }
+
+        .slide .svg-holder {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .slide svg {
+            position: absolute;
+            left: calc(50% - 300px);
+            top: calc(50% - 300px);
+            transform: scale(1.5);
+        }
+
+        .slide .content {
+            transform: translateZ(100px);
+            height: 100%;
+            width: calc(100% - 280px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .content .title {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 35pt;
+            line-height: 40pt;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+
+        .slide .content .info {
+            font-weight: 700;
+            font-size: 12pt;
+        }
+
+        .slide .content a {
+            position: relative;
+            float: left;
+            padding: 5px 15px;
+            background: #000;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 12pt;
+            border: 2px solid #000;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+        }
+
+        .slide .content a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .slide img {
+            transform: translateZ(50px);
+            position: absolute;
+            width: 300px;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .slide-num {
+            transform: translateZ(50px);
+            position: relative;
+            bottom: 0;
+            left: 90px;
+            z-index: 100;
+            margin: 0px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 25pt;
+            float: left;
+            color: #cdcdcd;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .slide-num:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 75px;
+            right: calc(100% + 15px);
+            float: left;
+            top: 22px;
+            background: #cdcdcd;
+        }
+
+        .slide.hidden {
+            opacity: 0;
+            pointer-events: none;
+            display: none;
+        }
+
+        .slide.out-left {
+            -webkit-transform: translate(-350px, 0px) !important;
+            transform: translate(-350px, 0px) !important;
+            opacity: 0;
+        }
+
+        .slide.out-left .content {
+            transform: translate(-150px, 0px) !important;
+        }
+
+        .slide.out-left img {
+            transform: translate(-250px, 0px) !important;
+        }
+
+        .slide.out-left .slide-num {
+            transform: translate(-100px, 0px) !important;
+        }
+
+        .slide.out-right {
+            -webkit-transform: translate(350px, 0px) !important;
+            transform: translate(350px, 0px) !important;
+            opacity: 0;
+        }
+
+        .slide.out-right .content {
+            transform: translate(250px, 0px) !important;
+        }
+
+        .slide.out-right img {
+            transform: translate(150px, 0px) !important;
+        }
+
+        .slide.out-right .slide-num {
+            transform: translate(200px, 0px) !important;
+        }
+
+        .slide.in-left {
+            -webkit-transform: translate(-350px, 0px) !important;
+            transform: translate(-350px, 0px) !important;
+            opacity: 0;
+            display: block;
+        }
+
+        .slide.in-left .content {
+            transform: translate(-150px, 0px) !important;
+        }
+
+        .slide.in-left img {
+            transform: translate(-250px, 0px) !important;
+        }
+
+        .slide.in-left .slide-num {
+            transform: translate(-100px, 0px) !important;
+        }
+
+        .slide.in-right {
+            -webkit-transform: translate(350px, 0px) !important;
+            transform: translate(350px, 0px) !important;
+            opacity: 0;
+            display: block;
+        }
+
+        .slide.in-right .content {
+            transform: translate(250px, 0px) !important;
+        }
+
+        .slide.in-right img {
+            transform: translate(150px, 0px) !important;
+        }
+
+        .slide.in-right .slide-num {
+            transform: translate(200px, 0px) !important;
+        }
+
+        .scroll-down {
+            width: 200px;
+            left: calc(50% - 100px);
+            bottom: 20px;
+            float: left;
+            position: absolute;
+        }
+
+        .scroll-down .mouse {
+            float: left;
+            position: relative;
+            height: 49px;
+            width: 30px;
+            left: calc(50% - 15px);
+            border-radius: 500px;
+            border: 2px solid #000;
+        }
+
+        .scroll-down .mouse .dot {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background: #000;
+            border-radius: 500px;
+            left: calc(50% - 4px);
+            top: 5px;
+            animation: wheel 2s ease-in-out infinite;
+        }
+
+        .scroll-down p {
+            float: left;
+            clear: both;
+            width: 100%;
+            margin: 5px 0px 0px 0px;
+            text-align: center;
+            font-size: 9pt;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        @keyframes wheel {
+            0% {
+                top: 5px;
+            }
+
+            80% {
+                top: 5px;
+            }
+
+            90% {
+                top: 10px;
+            }
+
+            100% {
+                top: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body translate="no">
+    <div id="cool-slider-app" class="cool-slider">
+        <div id="slide-0" data-tilt-full-page-listening="" class="slide"
+            style="will-change: transform; transform: perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="svg-holder">
+            </div>
+            <div data-tilt-full-page-listening="" class="content">
+                <h1 class="title">UNDER CONSTRACTION</h1>
+                <p class="info">Maaf website kami sedang dalam perawatan berkala</p> 
+                <p class="info">informasi lebih lanjut hubungi costumer service kami</p>
+                <a class="button">Hubungi Sekarang</a>
+            </div> 
+            <img src="./assets/undraw_under_construction_46pa.svg" style="width: 600px; margin-left: 50%;">
+        </div>
+        <div id="attribution">
+            <a href="https://codepen.io/mattyfours/pen/LoNgZX?editors=0110" target="_blank" style="margin-top: 90%;">Inspire by Matthew Fournier</a>
+        </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script id="rendered-js">
+        var pathOptions = [
+            "M140.2,-120.8C167.4,-77.8,165.1,-20.3,148.8,27.2C132.6,74.6,102.3,112.1,63.1,131C23.9,149.9,-24.3,150.2,-79.8,135.2C-135.4,120.2,-198.3,89.9,-209.8,46C-221.4,2.1,-181.4,-55.4,-137.9,-102.1C-94.3,-148.9,-47.2,-185,4.7,-188.7C56.6,-192.4,113.1,-163.9,140.2,-120.8Z",
+            "M130.7,-109.3C152,-77.6,139.9,-24.2,130.6,35.2C121.3,94.5,114.9,159.9,80.7,181.7C46.6,203.6,-15.3,182,-69.8,152.8C-124.3,123.5,-171.3,86.7,-191.9,33.3C-212.6,-20.2,-206.7,-90.2,-170.4,-125.4C-134,-160.5,-67,-160.7,-6.1000000000000005,-155.9C54.7,-151,109.5,-141,130.7,-109.3Z",
+            "M127.8,-105.1C173.3,-44.9,223.2,8.7,215,50.9C206.9,93.2,140.7,124.1,77.9,149.7C15,175.4,-44.5,195.8,-103.3,180.6C-162,165.3,-219.9,114.4,-221.1,63.6C-222.2,12.8,-166.6,-37.9,-120.3,-98.3C-74,-158.7,-37,-228.8,2.1000000000000005,-230.5C41.2,-232.2,82.4,-165.3,127.8,-105.1Z",
+            "M129.8,-79.7C177.7,-43.4,232.7,11.100000000000001,231.9,68.4C231.2,125.8,174.8,185.9,113.9,201.9C52.9,218,-12.600000000000001,190.1,-65.8,156.8C-119,123.4,-159.9,84.6,-168.3,40.5C-176.6,-3.5,-152.4,-52.9,-119,-85.9C-85.5,-118.8,-42.7,-135.4,-0.8999999999999995,-134.7C40.9,-134,81.8,-115.9,129.8,-79.7Z"
+        ];
+
+
+        var sliderSlides = [{
+                index: 0,
+                title: "Go Skate, Never Hate",
+                info: "How the skateboarding community saved a child's life.",
+                path: pathOptions[0],
+                fill: "red",
+                img: "https://static1.squarespace.com/static/55947ac3e4b0fa882882cd65/58ab7d7229687f223f18a4d4/58ab9a30ff7c506eef2ffb61/1487641219873/NS_0020.png?format=300w"
+            },
+
+            {
+                index: 1,
+                title: "Riding my bike",
+                info: "A journey to cycle around the world.",
+                path: pathOptions[1],
+                fill: "lime",
+                img: "https://static1.squarespace.com/static/55947ac3e4b0fa882882cd65/58ab7d7229687f223f18a4d4/58ab9a202994caba1a6e752b/1487641219602/NS_0012.png?format=750w"
+            },
+
+            {
+                index: 2,
+                title: "The Latest Fashion",
+                info: "The latest trends that make you want to dance.",
+                path: pathOptions[2],
+                fill: "orange",
+                img: "https://static1.squarespace.com/static/55947ac3e4b0fa882882cd65/58ab7d7229687f223f18a4d4/58ab9a5af7e0ab024bc50413/1487641220046/NS_0034.png?format=750w"
+            },
+
+            {
+                index: 3,
+                title: "Landscaping Tips",
+                info: "Use these simple tips to get the nicest yard in your neighbourhood.",
+                path: pathOptions[3],
+                fill: "yellow",
+                img: "https://static1.squarespace.com/static/55947ac3e4b0fa882882cd65/58ab7d7229687f223f18a4d4/58ab9ad4db29d6ca0ceae83d/1487641340257/NS_0053.png?format=750w"
+            }
+        ];
+
+
+
+        var app = new Vue({
+            el: "#cool-slider-app",
+            data: {
+                slideNumber: 0,
+                slides: sliderSlides,
+                amountOfSlides: sliderSlides.length,
+                inTransition: false
+            },
+
+            methods: {
+                init() {
+                    $('.slide').addClass('hidden');
+                    $('#slide-0').removeClass('hidden');
+                    var slides = document.getElementsByClassName("slide");
+                    for (var i = 0; i < slides.length; i++) {
+                        if (window.CP.shouldStopExecution(0)) break;
+                        VanillaTilt.init(slides[i], {
+                            max: 45,
+                            speed: 1500,
+                            perspective: 800
+                        });
+
+                    }
+                    window.CP.exitedLoop(0);
+                },
+                previousSlide() {
+                    var oldSlide = this.slideNumber;
+                    this.slideNumber--;
+                    if (this.slideNumber < 0) {
+                        this.slideNumber = this.amountOfSlides - 1;
+                    }
+                    var newSlide = this.slideNumber;
+
+                    $('#slide-' + newSlide).addClass('in-left');
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).addClass('out-right');
+                        $('#slide-' + newSlide).removeClass('hidden');
+                    }, 1000);
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).addClass('hidden');
+                        $('#slide-' + newSlide).removeClass('in-left');
+                    }, 2000);
+                    var self = this;
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).removeClass('out-right');
+                        self.inTransition = false;
+                    }, 2500);
+
+
+                },
+                nextSlide() {
+                    var oldSlide = this.slideNumber;
+                    this.slideNumber++;
+                    if (this.slideNumber > this.amountOfSlides - 1) {
+                        this.slideNumber = 0;
+                    }
+                    var newSlide = this.slideNumber;
+
+                    $('#slide-' + newSlide).addClass('in-right');
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).addClass('out-left');
+                        $('#slide-' + newSlide).removeClass('hidden');
+                    }, 1000);
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).addClass('hidden');
+                        $('#slide-' + newSlide).removeClass('in-right');
+                    }, 2000);
+                    var self = this;
+                    setTimeout(function () {
+                        $('#slide-' + oldSlide).removeClass('out-left');
+                        self.inTransition = false;
+                    }, 2500);
+                },
+                handleScroll: function (evt, el) {
+                    if (this.inTransition == false) {
+                        this.inTransition = true;
+                        if (evt.deltaY < 0) {
+                            // Scroll Up
+                            this.previousSlide();
+                        }
+                        if (evt.deltaY > 0) {
+                            // Scroll Down
+                            this.nextSlide();
+                        }
+                    }
+                }
+            },
+
+            mounted() {
+                this.init();
+            }
+        });
+        //# sourceURL=pen.js
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

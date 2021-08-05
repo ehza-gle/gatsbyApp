@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
 
     <style>
@@ -41,6 +41,7 @@
                     <img src="img/favicon.svg" alt="Suzuki DKU" style="width: 100px;">
                 </a>
             </div>
+            
             <div class="block lg:hidden pr-4">
                 <div id="animate-toogle" class="flex">
                     <label for="check">
@@ -52,7 +53,7 @@
                 </div>
             </div>
             <div class="w-full flex-grow p-4 lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-black md:bg-transparent z-20"
-                id="nav-content">
+                id="a-nav">
                 <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
                     <li class="mr-3 text-right">
                         <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="./">Beranda</a>
@@ -69,13 +70,15 @@
                     <li class="mr-3 text-right">
                         <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="pricelist.html">Daftar Harga</a>
                     </li>
+                    <li> <a id="darkmode" class=" btn btn-sm toggle fixed" >tet</a></li>
+                   
                 </ul>
             </div>
         </div>
         <div id="progress" class="h-1 z-40 top-0" style="background:linear-gradient(to right, rgba(224, 231, 255) var(--scroll), transparent 0);"></div>
     </nav>
 
-    <section id="carousel" class="bg-base-200 pt-20 md:pt-0" data-theme="emerald">
+    <section id="carousel" class="bg-base-200 pt-0" data-theme="emerald">
 
         <div id="slide" class="carousel slide" data-ride="carousel">
 
@@ -113,6 +116,8 @@
 
     </section>
 
+   
+
     <section id="pricelist" class="bg-base-200" data-theme="emerald">
         <div class="container flex bg-base-200 mx-auto">
             <div class="flex-1 md:grid justify-items-center md:grid-cols-4">
@@ -120,7 +125,7 @@
                 <!-- XL7, ANE, ANE SS, IGNIS, BALENO -->
                 <div class="overscroll-auto md:col-span-2">
                     <!-- XL7 -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="xl7" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki XL7
@@ -148,7 +153,7 @@
                     </div>
 
                     <!-- ANE -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="ane" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki All New Ertiga
@@ -180,7 +185,7 @@
                     </div>
 
                     <!-- ANE SS -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="aness" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki All New Ertiga Suzuki Sport
@@ -198,7 +203,7 @@
                     </div>
 
                     <!-- New Ignis -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="ignis" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New Ignis
@@ -224,7 +229,7 @@
                     </div>
 
                     <!-- New Baleno -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="baleno" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New Baleno
@@ -242,7 +247,7 @@
                 <!-- S-CROSS, JIMNY, KARIMUN, APV, CARRY -->
                 <div class="overscroll-auto md:col-span-2 ">
                     <!-- New SX4 S-Cross -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="scross" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New SX4 S-Cross
@@ -258,7 +263,7 @@
                     </div>
 
                     <!-- New Jimny -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="jimny" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New Jimny
@@ -284,7 +289,7 @@
                     </div>
 
                     <!-- New Karimun -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="karimun" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New Karimun Wagon R
@@ -324,7 +329,7 @@
                     </div>
 
                     <!-- New APV -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="apv" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New APV
@@ -355,7 +360,7 @@
                     </div>
 
                     <!-- New Carry -->
-                    <div class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
+                    <div id="carry" class="flex-shrink collapse w-auto md:w-96 rounded-box border border-base-300 collapse-arrow">
                         <input type="checkbox">
                         <div class="collapse-title md:text-xl text-sm bg-base-200 text-gray-800">
                             Suzuki New Carry
@@ -521,7 +526,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
+  
     <script>
         $(function () {
             AOS.init();
@@ -533,12 +538,20 @@
     </script>
 
     <script>
+        const body = document.documentElement;
+        
+        document.getElementById('darkmode').onclick = function () {
+            body.classList.add("bg-gray-600");
+            body.classList.add("text-white");
+        }
         document.getElementById('check').onclick = function () {
-            document.getElementById("nav-content").classList.toggle("hidden");
+            document.getElementById("a-nav").classList.toggle("hidden");
+            document.getElementById("a-nav").classList.add("bg-gray-100");
+            document.getElementById("header").classList.add("bg-gray-100");
         }
 
         document.getElementById('a-nav').onclick = function () {
-            document.getElementById("check").click();
+            document.getElementById("check").click ();
         }
     </script>
 
@@ -551,7 +564,7 @@
         scroll;
         var scrollpos = window.scrollY;
         var header = document.getElementById("header");
-        var navcontent = document.getElementById("nav-content");
+        var navcontent = document.getElementById("a-nav");
 
 
         document.addEventListener('scroll', function () { 
@@ -561,18 +574,16 @@
 
             if (scrollpos > 10) {
                 header.classList.add("bg-gray-100");
-                navcontent.classList.remove("bg-gray-100");
                 navcontent.classList.add("bg-gray-100");
             } else {
                 header.classList.remove("bg-gray-100");
                 navcontent.classList.remove("bg-gray-100");
-                navcontent.classList.add("bg-gray-100");
 
             }
 
         });
 
-    </script>                                           
+    </script>                                          
 
     <script>
         // Add scrollspy to <body>

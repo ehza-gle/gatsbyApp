@@ -1,0 +1,282 @@
+/* Global Style */
+.rounded-none {
+    border-radius: 0px;
+}
+
+.modal {
+    position: fixed;
+    background: rgba( 255, 255, 255, 0.7 );
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal>div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+}
+
+.bg-sky {
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+.bg-darkmoon {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+/*----------------------------------------------*/
+
+/* Scroll to Top */
+.crunchify-top:hover {
+    color: #1aa1ca !important
+}
+
+.crunchify-top {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.top-arrow {
+    position: absolute;
+    padding: 0px 3px;
+}
+/*----------------------------------------------*/
+
+/* BUTTON Kotak */
+.btn-kotak {
+    border-radius: 0px;
+    border-color: black;
+    transition: all .5s ease-in-out;
+}
+
+.btn-kotak:hover {
+    background: rgb(59, 130, 246);
+    border-color: black;
+    color: white;
+}
+/*----------------------------------------------*/
+
+/* BUTTON Modal */
+.btn-modalYes {
+    background-color: rgb(59, 130, 246);
+    border-color: rgb(59, 130, 246);
+    color: white;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-modalYes:hover {
+    background: rgb(10, 88, 214);
+    color: white;
+}
+
+.btn-modalNo {
+    background-color: rgb(85, 134, 136);
+    border-color: rgb(85, 134, 136);
+    color: white;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-modalNo:hover {
+    background: rgb(57, 107, 109);
+    color: white;
+}
+/*----------------------------------------------*/
+
+/* BUTTON Kontak */
+.btn-kontak {
+    background-color: rgb(59, 130, 246);
+    color: white;
+    border: 0px;
+    display: inline-block;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.btn-kontak:hover {
+    background: rgb(59, 130, 246);
+    font-weight: bold;
+    border: 0px;
+    transform: translateY(-6px);
+    animation-name: hover;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(-6px);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translateY(-3px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-6px);
+        opacity: 0.9;
+    }
+}
+
+/*----------------------------------------------*/
+
+/* Animation SVG */
+.anime {
+    display: inline-block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.anime:hover {
+    animation-name: anime-tickle;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes anime-tickle {
+    16.65% {
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*----------------------------------------------*/
+
+/* NAVBAR */
+#a-nav a {
+    color: black;
+}
+
+#a-nav a:hover {
+    color: rgba(59, 130, 246);
+}
+
+#a-nav .btn-ghost {
+    border: 0px;
+}
+
+#a-nav .btn-ghost:hover {
+    border: 0px;
+}
+
+/*----------------------------------------------*/
+
+/* Button Ghost Sales Service Sparepart */
+#dku .btn-ghost:hover {
+    border: 0px;
+}
+
+#dku .btn-ghost {
+    border: 0px;
+}
+
+#dku .btn {
+    border: 0px;
+}
+
+#header label {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    cursor: pointer;
+}
+
+/*----------------------------------------------*/
+
+/* Toogle Navbar di HP */
+#header label span {
+    background: rgb(28, 173, 209);
+    border-radius: 10px;
+    height: 3.5px;
+    margin: 3.5px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+#header span:nth-of-type(1) {
+    width: 50%;
+}
+
+#header span:nth-of-type(2) {
+    width: 100%;
+}
+
+
+#header span:nth-of-type(3) {
+    width: 75%;
+
+}
+
+#header input[type="checkbox"] {
+    display: none;
+}
+
+#header input[type="checkbox"]:checked~span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(4px, 0px)
+}
+
+#header input[type="checkbox"]:checked~span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+
+#header input[type="checkbox"]:checked~span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(15px, -5.5px) rotatez(45deg);
+}
+
+/*----------------------------------------------*/
