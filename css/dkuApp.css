@@ -1,4 +1,8 @@
 /* Global Style */
+body {
+    overflow-x: hidden;
+}
+
 .rounded-none {
     border-radius: 0px;
 }
@@ -66,6 +70,7 @@
 
 /* BUTTON Kotak */
 .btn-kotak {
+    font-size: small;
     border-radius: 0px;
     border-color: black;
     transition: all .5s ease-in-out;
@@ -76,6 +81,24 @@
     border-color: black;
     color: white;
 }
+
+@media only screen and (min-width: 768px) {
+    .btn-kotak {
+        font-size: 0.6rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .btn-kotak {
+        font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 308px) {
+    .btn-kotak {
+        font-size: 0.5rem;
+    }
+  }
 /*----------------------------------------------*/
 
 /* BUTTON Modal */
