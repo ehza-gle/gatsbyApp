@@ -1,0 +1,336 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+
+    <title>Under Constraction Site</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+        * {
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #attribution a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        }
+
+        
+        .cool-slider {
+            width: 100%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            transform-style: preserve-3d;
+            width: 600px;
+            height: 300px;
+            top: calc(50% - 150px);
+            left: calc(50% - 300px);
+            transition: all 1.5s ease;
+            -webkit-transition: all 1.5s ease;
+            position: absolute;
+        }
+
+        .slide .svg-holder {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .slide svg {
+            position: absolute;
+            left: calc(50% - 300px);
+            top: calc(50% - 300px);
+            transform: scale(1.5);
+        }
+
+        .slide .content {
+            transform: translateZ(100px);
+            height: 100%;
+            width: calc(100% - 280px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .content .title {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 35pt;
+            line-height: 40pt;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+
+        .slide .content .info {
+            font-weight: 700;
+            font-size: 12pt;
+        }
+
+        .slide .content a {
+            position: relative;
+            float: left;
+            padding: 5px 15px;
+            background: #000;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 12pt;
+            border: 2px solid #000;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+        }
+
+        .slide .content a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .slide img {
+            transform: translateZ(50px);
+            position: absolute;
+            width: 300px;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .slide-num {
+            transform: translateZ(50px);
+            position: relative;
+            bottom: 0;
+            left: 90px;
+            z-index: 100;
+            margin: 0px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 25pt;
+            float: left;
+            color: #cdcdcd;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .slide .slide-num:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 75px;
+            right: calc(100% + 15px);
+            float: left;
+            top: 22px;
+            background: #cdcdcd;
+        }
+
+        .slide.hidden {
+            opacity: 0;
+            pointer-events: none;
+            display: none;
+        }
+
+        .slide.out-left {
+            -webkit-transform: translate(-350px, 0px) !important;
+            transform: translate(-350px, 0px) !important;
+            opacity: 0;
+        }
+
+        .slide.out-left .content {
+            transform: translate(-150px, 0px) !important;
+        }
+
+        .slide.out-left img {
+            transform: translate(-250px, 0px) !important;
+        }
+
+        .slide.out-left .slide-num {
+            transform: translate(-100px, 0px) !important;
+        }
+
+        .slide.out-right {
+            -webkit-transform: translate(350px, 0px) !important;
+            transform: translate(350px, 0px) !important;
+            opacity: 0;
+        }
+
+        .slide.out-right .content {
+            transform: translate(250px, 0px) !important;
+        }
+
+        .slide.out-right img {
+            transform: translate(150px, 0px) !important;
+        }
+
+        .slide.out-right .slide-num {
+            transform: translate(200px, 0px) !important;
+        }
+
+        .slide.in-left {
+            -webkit-transform: translate(-350px, 0px) !important;
+            transform: translate(-350px, 0px) !important;
+            opacity: 0;
+            display: block;
+        }
+
+        .slide.in-left .content {
+            transform: translate(-150px, 0px) !important;
+        }
+
+        .slide.in-left img {
+            transform: translate(-250px, 0px) !important;
+        }
+
+        .slide.in-left .slide-num {
+            transform: translate(-100px, 0px) !important;
+        }
+
+        .slide.in-right {
+            -webkit-transform: translate(350px, 0px) !important;
+            transform: translate(350px, 0px) !important;
+            opacity: 0;
+            display: block;
+        }
+
+        .slide.in-right .content {
+            transform: translate(250px, 0px) !important;
+        }
+
+        .slide.in-right img {
+            transform: translate(150px, 0px) !important;
+        }
+
+        .slide.in-right .slide-num {
+            transform: translate(200px, 0px) !important;
+        }
+
+        .scroll-down {
+            width: 200px;
+            left: calc(50% - 100px);
+            bottom: 20px;
+            float: left;
+            position: absolute;
+        }
+
+        .scroll-down .mouse {
+            float: left;
+            position: relative;
+            height: 49px;
+            width: 30px;
+            left: calc(50% - 15px);
+            border-radius: 500px;
+            border: 2px solid #000;
+        }
+
+        .scroll-down .mouse .dot {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background: #000;
+            border-radius: 500px;
+            left: calc(50% - 4px);
+            top: 5px;
+            animation: wheel 2s ease-in-out infinite;
+        }
+
+        .scroll-down p {
+            float: left;
+            clear: both;
+            width: 100%;
+            margin: 5px 0px 0px 0px;
+            text-align: center;
+            font-size: 9pt;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        @keyframes wheel {
+            0% {
+                top: 5px;
+            }
+
+            80% {
+                top: 5px;
+            }
+
+            90% {
+                top: 10px;
+            }
+
+            100% {
+                top: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body translate="no">
+    
+    <div id="cool-slider-app" class="cool-slider">
+        <div id="slide-0" data-tilt-full-page-listening="" class="slide"
+            style="will-change: transform; transform: perspective(5000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="svg-holder">
+            </div>
+            <div data-tilt-full-page-listening="" class="content">
+                <h1 class="title">UNDER CONSTRACTION</h1>
+                <p class="info">Maaf website kami sedang dalam perawatan berkala</p> 
+                <p class="info">informasi lebih lanjut hubungi costumer service kami</p>
+                <a href="https://api.whatsapp.com/send/?phone=62811572922&text=Hallo saya costumer suzuki ingin mendapatkan informasi seputar produk suzuki&app_absent=0" class="button">Hubungi Sekarang</a>
+            </div> 
+            <img src="./assets/undraw_under_construction_46pa.svg" style="width: 600px; margin-left: 50%;">
+        </div>
+    </div>
+
+    <div id="attribution">
+        <a href="https://codepen.io/mattyfours/pen/LoNgZX?editors=0110" target="_blank" style="margin-top: 90%;">Inspire by Matthew Fournier</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector("#cool-slider-app"), {
+            max: 15,
+            speed: 1000
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+
+</body>
+
+</html>
