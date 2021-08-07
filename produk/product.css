@@ -1,4 +1,4 @@
-#pickColor .pickColor img{
+#pickColor .pickColor img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,13 +7,13 @@
 }
 
 #pickColor .nav {
-    background: #1f4037;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border-radius: 2px;
+    background: #1f4037;
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+    background: linear-gradient(to right, #99f2c8, #1f4037);
+    border-radius: 2px;
 }
 
-.pickColor .nav{
+.pickColor .nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,8 @@ border-radius: 2px;
     padding: 5px;
     background-color: #ffff;
 }
-.pickColor .nav span{ 
+
+.pickColor .nav span {
     position: relative;
     width: 50px;
     height: 50px;
@@ -33,69 +34,83 @@ border-radius: 2px;
 }
 
 .pickColor .nav span.satu,
-.pickColor .nav i.satu{ /* Rising Orange + Black */
+.pickColor .nav i.satu {
+    /* Rising Orange + Black */
     background: #c04c3c;
 }
 
 .pickColor .nav span.dua,
-.pickColor .nav i.dua{ /* Brave Kakhi + Black */
+.pickColor .nav i.dua {
+    /* Brave Kakhi + Black */
     background: #ae923d;
 }
 
 .pickColor .nav span.tiga,
-.pickColor .nav i.tiga{ /* Prime Cool Black */
+.pickColor .nav i.tiga {
+    /* Prime Cool Black */
     background: #000;
 }
 
 .pickColor .nav span.empat,
-.pickColor .nav i.empat{ /* Prime Snow White */
+.pickColor .nav i.empat {
+    /* Prime Snow White */
     background: #fff;
 }
 
 .pickColor .nav span.lima,
-.pickColor .nav i.lima{ /* Pearl Burgundy Red */
+.pickColor .nav i.lima {
+    /* Pearl Burgundy Red */
     background: #534050;
 }
 
 .pickColor .nav span.enam,
-.pickColor .nav i.enam{ /* Metalic Magma Grey */
+.pickColor .nav i.enam {
+    /* Metalic Magma Grey */
     background: #797979;
 }
 
 .pickColor .nav span.tujuh,
-.pickColor .nav i.tujuh{ /* Pearl Snow White*/
+.pickColor .nav i.tujuh {
+    /* Pearl Snow White*/
     background: #fff;
 }
 
 .pickColor .nav span.delapan,
-.pickColor .nav i.delapan{ /* Prime Cool Black */
+.pickColor .nav i.delapan {
+    /* Prime Cool Black */
     background: #000;
 }
 
 .pickColor .nav span.sembilan,
-.pickColor .nav i.sembilan{ /* Pearl Snow White */
+.pickColor .nav i.sembilan {
+    /* Pearl Snow White */
     background: #fff;
 }
 
 .pickColor .nav span.sepuluh,
-.pickColor .nav i.sepuluh{ /* Prime Cool Black */
+.pickColor .nav i.sepuluh {
+    /* Prime Cool Black */
     background: #000;
 }
 
 .pickColor .nav span.sebelas,
-.pickColor .nav i.sebelas{ /* Metalic Magma Gray*/
+.pickColor .nav i.sebelas {
+    /* Metalic Magma Gray*/
     background: #797979;
 }
 
 .pickColor .nav span.duabelas,
-.pickColor .nav i.duabelas{ /* Pearl Burgundy Red */
+.pickColor .nav i.duabelas {
+    /* Pearl Burgundy Red */
     background: #534050;
 }
-.pickColor .nav span.active{
+
+.pickColor .nav span.active {
     border: 2px solid rgb(50, 40, 10);
     transform: scale(1.2);
 }
-.pickColor .nav span.active + i{
+
+.pickColor .nav span.active+i {
     position: absolute;
     top: 0;
     left: 0;
@@ -105,4 +120,3 @@ border-radius: 2px;
     mix-blend-mode: hue;
 
 }
-

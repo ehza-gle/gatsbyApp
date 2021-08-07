@@ -20,10 +20,55 @@
    
     <!-- Stylesheet -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@1.11.0/dist/styled.css">
+    <link rel="stylesheet" href="../css/produk.css">
     <link rel="stylesheet" href="../css/dkuApp.css">
-    <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <style>
+      
+        .swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
+            background-image: none;
+        }
+
+        .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 320px;
+        box-shadow: 0 15px 50px rgba(0, 0, blue, alpha);
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+        filter: blur(0px);
+      }
+
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+      }
+
+      </style>
 
 </head>
 <body class="bg-darkmoon">
@@ -49,17 +94,17 @@
                 id="a-nav">
                 <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="#beranda">Beranda</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="../index.html#beranda">Beranda</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="#model">Model</a>
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="../index.html#model">Model</a>
                     </li>
                     <li class="mr-3 text-right">
                         <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700"
-                            href="#bandingkan-kendaraan">Bandingkan Model</a>
+                            href="../index.html#bandingkan-kendaraan">Bandingkan Model</a>
                     </li>
                     <li class="mr-3 text-right">
-                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="#hubungi-kami">Kontak
+                        <a class="btn btn-ghost btn-sm rounded-btn hover:text-blue-700" href="../index.html#hubungi-kami">Kontak
                             Kami</a>
                     </li>
                     <li class="mr-3 text-right">
@@ -78,38 +123,33 @@
     </section>
     
     <section id="breadchumb" class="bg-sky">
-        <div class="flex justify-center">
-            <nav class="text-black font-bold my-8" aria-label="Breadcrumb">
-                <ol class="list-none p-0 inline-flex">
-                    <li class="flex items-center">
-                        <a href="../index.html"
-                            class="inline-block align-middle text-center select-none font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">Beranda</a>
-                        <svg class="fill-current w-3 mb-2 font-medium leading-tight text-2xl mx-3"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path
-                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                            </svg>
-                    </li>
-                    <li class="flex items-center">
-                        <a href="produk.html"
-                            class="inline-block align-middle text-center select-none font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">Produk</a>
-                        <svg class="fill-current w-3 mb-2 font-medium leading-tight text-2xl mx-3"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path
-                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                            </svg>
-                    </li>
-                    <li>
-                        <a href="xl7.html"
-                            class="inline-block align-middle text-center select-none font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline text-blue-500"
-                            aria-current="page">XL 7</a>
-                    </li>
-                </ol>
-            </nav>
+        <div class="flex justify-center btn-navigasi ">
+            <ul class="flex text-gray-700 text-xs lg:text-base font-bold">
+                <li class="inline-flex items-center ">
+                  <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </a>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 w-auto text-gray-700 mx-px md:mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 5l7 7-7 7" />
+                  </svg>
+                </li>
+                <li class="inline-flex items-center">
+                  <a href="../produk.html">Produk</a>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 w-auto text-gray-700 mx-px md:mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 5l7 7-7 7" />
+                  </svg>
+                </li>
+                <li class="inline-flex items-center">
+                  <a href="#" class="text-teal-400 active">XL7</a>
+                </li>
+              </ul>
+ 
         </div>
     </section>
 
-    <section>
+    <section id="xl7">
         <div class="container mx-auto sm:px-4 mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div class="text-center lg:w-2/3 w-full">
                 <img src="https://suzukicdn.net/themes/default2019/img/automobile/xl7/gear-to-accomplish.png" alt="Gear to Accomplish">
@@ -126,9 +166,9 @@
             <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
                 src="https://suzukicdn.net/themes/default2019/img/automobile/xl7/XL7_1.png">
 
-            <div class="mt-2 collapse w-4/5 border rounded-box border-base-300 collapse-arrow">
+            <div class="mt-2 collapse w-4/5 border  border-base-300 collapse-arrow">
                 <input type="checkbox">
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-sm md:text-xl font-base md:font-medium">
                     DIMENSI
                 </div>
                 <div class="collapse-content">
@@ -136,36 +176,36 @@
                         <div class="tab-content flex justify-around">
                             <tbody>
                                 <tr>
-                                    <th class="text-left">Panjang Keseluruhan</th>
-                                    <td class="text-center">4,450 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Panjang Keseluruhan</th>
+                                    <td class="text-center text-sm md:text-xl">4,450 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Lebar Keseluruhan</th>
-                                    <td class="text-center">1,775 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Lebar Keseluruhan</th>
+                                    <td class="text-center text-sm md:text-xl">1,775 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Tinggi Keseluruhan</th>
-                                    <td class="text-center">1,710 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Tinggi Keseluruhan</th>
+                                    <td class="text-center text-sm md:text-xl">1,710 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jarak Poros Roda</th>
-                                    <td class="text-center">2,740 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Jarak Poros Roda</th>
+                                    <td class="text-center text-sm md:text-xl">2,740 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jarak Pijak Depan</th>
-                                    <td class="text-center">1,515 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Jarak Pijak Depan</th>
+                                    <td class="text-center text-sm md:text-xl">1,515 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jarak Pijak Belakang</th>
-                                    <td class="text-center">1,530 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Jarak Pijak Belakang</th>
+                                    <td class="text-center text-sm md:text-xl">1,530 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jarak Terendah</th>
-                                    <td class="text-center">200 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Jarak Terendah</th>
+                                    <td class="text-center text-sm md:text-xl">200 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Radius Putar Minimum</th>
-                                    <td class="text-center">5.1</td>
+                                    <th class="text-left text-sm md:text-xl">Radius Putar Minimum</th>
+                                    <td class="text-center text-sm md:text-xl">5.1</td>
                                 </tr>
                             </tbody>
                         </div>
@@ -173,9 +213,9 @@
                 </div>
             </div>
 
-            <div class="mt-2 collapse w-4/5 border rounded-box border-base-300 collapse-arrow">
+            <div class="mt-2 collapse w-4/5 border  border-base-300 collapse-arrow">
                 <input type="checkbox">
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-sm md:text-xl font-base md:font-medium">
                     MESIN
                 </div>
                 <div class="collapse-content">
@@ -183,49 +223,49 @@
                         <div class="tab-content flex justify-around">
                             <tbody>
                                 <tr>
-                                    <th class="text-left">Jenis</th>
-                                    <td class="text-center">K15B</td>
+                                    <th class="text-left text-sm md:text-xl">Jenis</th>
+                                    <td class="text-center text-sm md:text-xl">K15B</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Isi Silinder</th>
-                                    <td class="text-center">4</td>
+                                    <th class="text-left text-sm md:text-xl">Isi Silinder</th>
+                                    <td class="text-center text-sm md:text-xl">4</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jumlah Katup</th>
-                                    <td class="text-center">16</td>
+                                    <th class="text-left text-sm md:text-xl">Jumlah Katup</th>
+                                    <td class="text-center text-sm md:text-xl">16</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Jumlah Silinder</th>
-                                    <td class="text-center">1.462 cm<sup>3</sup></td>
+                                    <th class="text-left text-sm md:text-xl">Jumlah Silinder</th>
+                                    <td class="text-center text-sm md:text-xl">1.462 cm<sup>3</sup></td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Diameter x Langkah</th>
-                                    <td class="text-center">74,0 x 85,0 mm</td>
+                                    <th class="text-left text-sm md:text-xl">Diameter x Langkah</th>
+                                    <td class="text-center text-sm md:text-xl">74,0 x 85,0 mm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Perbandingan Kompresi</th>
-                                    <td class="text-center">10,5</td>
+                                    <th class="text-left text-sm md:text-xl">Perbandingan Kompresi</th>
+                                    <td class="text-center text-sm md:text-xl">10,5</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Daya Maksimum</th>
-                                    <td class="text-center">77kW (104,7ps/6.000) KW/rpm</td>
+                                    <th class="text-left text-sm md:text-xl">Daya Maksimum</th>
+                                    <td class="text-center text-sm md:text-xl">77kW (104,7ps/6.000) KW/rpm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Momem Puntir Maksimum</th>
-                                    <td class="text-center">138 / 4.400Nm / rpm</td>
+                                    <th class="text-left text-sm md:text-xl">Momem Puntir Maksimum</th>
+                                    <td class="text-center text-sm md:text-xl">138 / 4.400Nm / rpm</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Sistem Bahan Bakar</th>
-                                    <td class="text-center">Multipoint Injection</td>
+                                    <th class="text-left text-sm md:text-xl">Sistem Bahan Bakar</th>
+                                    <td class="text-center text-sm md:text-xl">Multipoint Injection</td>
                                 </tr>
                             </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="mt-2 collapse w-4/5 border rounded-box border-base-300 collapse-arrow">
+            <div class="mt-2 collapse w-4/5 border  border-base-300 collapse-arrow">
                 <input type="checkbox">
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-sm md:text-xl font-base md:font-medium">
                     TRANSMISI
                 </div>
                 <div class="collapse-content">
@@ -233,12 +273,12 @@
                         <div class="tab-content flex justify-around">
                             <tbody>
                                 <tr>
-                                    <th class="text-left">Perbandingan Gigi Akhir</th>
-                                    <td class="text-center">4.353 (MT) / 4.375 (AT)</td>
+                                    <th class="text-left text-sm md:text-xl">Perbandingan Gigi Akhir</th>
+                                    <td class="text-center text-sm md:text-xl">4.353 (MT) / 4.375 (AT)</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Ratio Gear</th>
-                                    <td class="text-center">
+                                    <th class="text-left text-sm md:text-xl">Ratio Gear</th>
+                                    <td class="text-center text-sm md:text-xl">
                                         <table align="left" border="0" cellpadding="1" cellspacing="1"
                                             style="width: 100%;">
                                             <tbody>
@@ -291,9 +331,9 @@
                 </div>
             </div>
 
-            <div class="mt-2 collapse w-4/5 border rounded-box border-base-300 collapse-arrow">
+            <div class="mt-2 collapse w-4/5 border  border-base-300 collapse-arrow">
                 <input type="checkbox">
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-sm md:text-xl font-base md:font-medium">
                     RANGKA
                 </div>
                 <div class="collapse-content">
@@ -301,37 +341,37 @@
                         <div class="tab-content flex justify-around">
                             <tbody>
                                 <tr>
-                                    <th class="text-left">Sistem Kemudi</th>
-                                    <td class="text-center">Rack &amp; Pinion</td>
+                                    <th class="text-left text-sm md:text-xl">Sistem Kemudi</th>
+                                    <td class="text-center text-sm md:text-xl">Rack &amp; Pinion</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Suspensi Depan</th>
-                                    <td class="text-center">McPherson Strut with Coil Spring</td>
+                                    <th class="text-left text-sm md:text-xl">Suspensi Depan</th>
+                                    <td class="text-center text-sm md:text-xl">McPherson Strut with Coil Spring</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Suspensi Belakang</th>
-                                    <td class="text-center">Torsion Beam with Coil Spring</td>
+                                    <th class="text-left text-sm md:text-xl">Suspensi Belakang</th>
+                                    <td class="text-center text-sm md:text-xl">Torsion Beam with Coil Spring</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Rem Depan</th>
-                                    <td class="text-center">Ventilated Disc</td>
+                                    <th class="text-left text-sm md:text-xl">Rem Depan</th>
+                                    <td class="text-center text-sm md:text-xl">Ventilated Disc</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Rem Belakang</th>
-                                    <td class="text-center">Drum, leading &amp; trailing</td>
+                                    <th class="text-left text-sm md:text-xl">Rem Belakang</th>
+                                    <td class="text-center text-sm md:text-xl">Drum, leading &amp; trailing</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Ukuran Ban</th>
-                                    <td class="text-center">195/60 R16</td>
+                                    <th class="text-left text-sm md:text-xl">Ukuran Ban</th>
+                                    <td class="text-center text-sm md:text-xl">195/60 R16</td>
                                 </tr>
                             </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="mt-2 collapse w-4/5 border rounded-box border-base-300 collapse-arrow">
+            <div class="mt-2 collapse w-4/5 border  border-base-300 collapse-arrow">
                 <input type="checkbox">
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-sm md:text-xl font-base md:font-medium">
                     KAPASITAS
                 </div>
                 <div class="collapse-content">
@@ -339,12 +379,12 @@
                         <div class="tab-content flex justify-around">
                             <tbody>
                                 <tr>
-                                    <th class="text-left">Tempat Duduk</th>
-                                    <td class="text-center">7 Persons</td>
+                                    <th class="text-left text-sm md:text-xl">Tempat Duduk</th>
+                                    <td class="text-center text-sm md:text-xl">7 Persons</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-left">Tangki Bahan Bakar</th>
-                                    <td class="text-center">45 liters</td>
+                                    <th class="text-left text-sm md:text-xl">Tangki Bahan Bakar</th>
+                                    <td class="text-center text-sm md:text-xl">45 liters</td>
                                 </tr>
                             </tbody>
                     </table>
@@ -462,9 +502,408 @@
         </div>
     </section>
 
-    
+    <section id="produk-lainnya" class="hero bg-white">
+    <div #swiperRef="" class="text-gray-900 swiper-container mySwiper">
+        <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">MOBIL LAINNYA</h1>
+          </div>
+        <div class="swiper-wrapper">
+        <!-- XL7 -->
+          <div class="swiper-slide hidden">
+            <figure href="../produk/all-new-ertiga" class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-fill rounded"
+                    src="https://suzukicdn.net/uploads/automobile/xl7_thumb2.png" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki XL7
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- All New Ertiga -->
+          <div class="swiper-slide">
+            <figure href="../produk/all-new-ertiga" class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-fill rounded"
+                    src="https://suzukicdn.net/uploads/automobile/all-new-ertiga-thumb2.jpg" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki All New Ertiga
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- All New Ertiga SS -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/ertiga-sport-thumb.jpg"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki New Ertiga Suzuki Sport
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Ignis -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/Suzuki_Ignis_GX_Hero_Angle_FLIP_1.png" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki New Ignis
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Baleno -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/new-baleno-thumb-2.png" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki New Baleno
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New S-Cross -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/sx4.png" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki SX4 S-cross
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- Karimun 50TH -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/kar502.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Karimun 50TH AE
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- Karimun Wagon R -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/wagon-r-thumb3.jpg"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Karimun Wagon R
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Jimny -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/jimny-thumb.jpg" alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Suzuki Jimny
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New APV Luxury -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/APV-New-Luxury-thumb1.jpg"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            APV Luxury
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New APV Arena -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/APV-ARENA-thumb.jpg"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            APV Arena
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Carry Box -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="../img/Model/New carry box.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            New Carry Box
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Car Ambulance -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="../img/Model/new carry ambulance.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            New Carry Ambulance
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New APV Ambulance -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="../img/Model/apv ambulance.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            APV Arena Ambulance
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New APV Blind Van -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="../img/Model/apvBlindVan.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            APV Arena Blind Van
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- Wagon R Blind Van -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="../img/Model/wagon-r-blind-van.jpg"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            Karimun Wagon R Blind Van
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        <!-- New Carry -->
+          <div class="swiper-slide">
+            <figure class="bg-transparent rounded overflow-hidden">
+                <img class="h-48 w-full object-cover rounded"
+                    src="https://suzukicdn.net/uploads/automobile/tamnail_rev1.png"
+                    alt="" />
+                <figcaption class="transform -translate-y-8 p-3">
+                    <div class="bg-white px-3 py-2 rounded shadow-lg space-y-1">
+                        <h1 class="text-center font-medium tracking-tight capitalize border-b border-gray-200 border-opacity-75">
+                            New Carry
+                        </h1>
+                    </div>
+                </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination cursor-pointer"></div>
+      </div>
+
+    </section>
+
+    <a href="#" class="crunchify-top"><span class="top-arrow text-indigo-300"><svg xmlns="http://www.w3.org/2000/svg"
+        width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+            d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+    </svg></span></a>
+
+    <footer id="footer" class="hero bg-gray-100 text-gray-800 body-font" data-theme="emerald">
+    <div
+        class="container px-2 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="w-70 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-dark">
+                <img src="../img/favicon.svg" style="max-width: 40px;">
+                <span class="ml-3 text-lg md:text-xl">Daya Kharisma Utama Pontianak</span>
+            </a>
+            <p class="mt-2 text-sm text-dark-500">Jalan Ahmadyani No. 77</p>
+            <p class="mt-2 text-sm text-dark-500">Telp (sales) : 0561-742-333</p>
+            <p class="mt-2 text-sm text-dark-500">Telp (after-sales) : 0561-741-999</p>
+        </div>
+        <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-right text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 class="title-font font-medium text-dark tracking-widest text-sm mb-3">Cabang Kami</h2>
+                <nav class="list-none mb-10">
+                    <li>
+                        <a class="text-dark-400 hover:text-dark"
+                            href="https://www.dku.id/singkawang/">Singkawang</a>
+                    </li>
+                    <li>
+                        <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/ketapang/">Ketapang</a>
+                    </li>
+                    <li>
+                        <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/sintang/">Sintang</a>
+                    </li>
+                </nav>
+                <!--Sosial Media-->
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-dark-400" href="https://www.facebook.com/suzuki.dku/" target="_blank">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-dark-400" href="https://www.instagram.com/suzuki.dku/" target="_blank">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <section id="copyright">
+    <div class="bg-gray-600 bg-opacity-75">
+        <div class="container place-content-center mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-dark-400 text-sm text-center sm:text-left">© 2021 Suzuki Daya Kharisma Utama</p>
+        </div>
+    </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script src="../js/vanillajs-scrollspy.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <script>
+        var slideUp = {
+            duration: 1000,
+            distance: '150%',
+            origin: 'bottom',
+            opacity: null,
+            reset: false
+        };
+
+        const reveal = {
+            duration: 800,
+            delay: 375,
+            reset: true
+        }
+
+		ScrollReveal().reveal('#breadchumb', slideUp);
+        ScrollReveal().reveal('#xl7', reveal);
+        ScrollReveal().reveal('#spesifikasi', slideUp);
+        ScrollReveal().reveal('#pilihWarna', reveal);
+        ScrollReveal().reveal('#harga', slideUp);
+        ScrollReveal().reveal('#produk-lainnya', reveal);
+        ScrollReveal().reveal('#footer', reveal);
+        ScrollReveal().reveal('#copyright', reveal);
+	</script>
+            
+      <script>
+          var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+      });
+
+    </script>
+
+    <script>
+        window.onload = function () {
+           scrollSpy('#a-nav', {
+               offset: 0, // in pixels
+               menuActiveTarget: 'li > a',
+               sectionClass: '.scrollspy',
+               activeClass: 'activeSpy',
+               scrollContainer: ''
+           });
+       };
+   </script>
 
     <script>
         var h = document.documentElement,
@@ -484,11 +923,10 @@
             scrollpos = window.scrollY;
 
             if (scrollpos > 10) {
-                header.classList.add("bg-gray-100");
-                navcontent.classList.add("bg-gray-100");
+                header.classList.add("bg-gray-100-nav");
             } else {
-                header.classList.remove("bg-gray-100");
-                navcontent.classList.remove("bg-gray-100");
+                header.classList.remove("bg-gray-100-nav");
+                navcontent.classList.remove("bg-gray-100-nav");
 
             }
 
@@ -499,8 +937,7 @@
     <script>
         document.getElementById('check').onclick = function () {
             document.getElementById("a-nav").classList.toggle("hidden");
-            document.getElementById("a-nav").classList.add("bg-gray-100");
-            document.getElementById("header").classList.add("bg-gray-100");
+            document.getElementById("header").classList.add("bg-gray-100-nav");
         }
 
         document.getElementById('a-nav').onclick = function () {
@@ -609,6 +1046,29 @@
                 $(this).addClass( "active" );
             });
             
+        });
+    </script>
+
+    <!-- Crunchify's Scroll to Top Script -->
+    <script>
+        jQuery(document).ready(function () {
+            const offset = 500;
+            const duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.crunchify-top').fadeIn(duration);
+                } else {
+                    jQuery('.crunchify-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.crunchify-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({
+                    scrollTop: 0
+                }, duration);
+                return false;
+            })
         });
     </script>
 

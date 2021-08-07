@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@1.11.0/dist/styled.css" />
+    <link rel="stylesheet" href="./css/produk.css">
     <link rel="stylesheet" href="./css/dkuApp.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />    
@@ -118,7 +118,7 @@
               </div>
         </section>
     
-    <section id="pricelist" class="bg-base-200" data-theme="emerald">
+    <section id="pricelist" class="hero bg-white" data-theme="emerald">
         <div class="container flex bg-base-200 mx-auto">
             <div class="flex-1 md:grid justify-items-center md:grid-cols-4">
 
@@ -526,6 +526,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/vanillajs-scrollspy.min.js"></script>
+
+    <script>
+        window.onload = function () {
+           scrollSpy('#a-nav', {
+               offset: 0, // in pixels
+               menuActiveTarget: 'li > a',
+               sectionClass: '.scrollspy',
+               activeClass: 'activeSpy',
+               scrollContainer: ''
+           });
+       };
+   </script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -561,8 +574,7 @@
     <script>
         document.getElementById('check').onclick = function () {
             document.getElementById("a-nav").classList.toggle("hidden");
-            document.getElementById("a-nav").classList.add("bg-gray-100");
-            document.getElementById("header").classList.add("bg-gray-100");
+            document.getElementById("header").classList.add("bg-gray-100-nav");
         }
 
         document.getElementById('a-nav').onclick = function () {
@@ -588,45 +600,16 @@
             scrollpos = window.scrollY;
 
             if (scrollpos > 10) {
-                header.classList.add("bg-gray-100");
-                navcontent.classList.add("bg-gray-100");
+                header.classList.add("bg-gray-100-nav");
             } else {
-                header.classList.remove("bg-gray-100");
-                navcontent.classList.remove("bg-gray-100");
+                header.classList.remove("bg-gray-100-nav");
+                navcontent.classList.remove("bg-gray-100-nav");
 
             }
 
         });
 
     </script>                                           
-
-    <script>
-        // Add smooth scrolling on all links inside the navbar
-        $("#header a").on('click', function (event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if ($(this.hash + ', a[name="' + this.hash.substr(1) + '"]')) {
-
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                    $("#header ul li a[href^='#']").on('click', function(e) {
-                        e.preventDefault();
-                        $('html, body').animate({ 
-                            scrollTop: $(this.hash).offset().top - $('#header').height()
-                        }, 600);
-
-                        window.location.hash = hash;
-
-                    });
-                
-            } // End if
-
-        });
-    </script>
 
     <!-- Crunchify's Scroll to Top Script -->
     <script>

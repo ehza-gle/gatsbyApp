@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,15 +18,15 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-   
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@1.11.0/dist/styled.css" />
+    <link rel="stylesheet" href="./css/daisyUI.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="./css/dkuApp.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />    
-    
-    
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
     <style>
         .swiper-container {
             width: 100%;
@@ -59,74 +60,84 @@
             object-fit: cover;
         }
     </style>
-    
+
 </head>
+
 <body translate="no">
 
     <section class="hero">
-    <nav id="header" class="fixed bg-transparent text-white w-full z-20 top-0">
-        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-px">
-            <div class="flex pl-8 p-2 pt-px">
-                <a class="text-dark no-underline hover:text-white hover:no-underline" href="https://dku.id">
-                    <img src="img/favicon.svg" alt="Suzuki DKU" style="width: 100px;">
-                </a>
-            </div>
-            <div class="block lg:hidden pr-4">
-                <div id="animate-toogle" class="flex">
-                    <label for="check">
-                        <input type="checkbox" id="check"/> 
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
+        <nav id="header" class="navbar fixed bg-transparent text-white w-full z-20 top-0">
+            <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-px">
+                <div class="flex pl-8 p-2 pt-px">
+                    <a class="text-dark no-underline hover:text-white hover:no-underline" href="https://dku.id">
+                        <img src="img/favicon.svg" alt="Suzuki DKU" style="width: 100px;">
+                    </a>
+                </div>
+                <div class="block lg:hidden pr-4">
+                    <div id="animate-toogle" class="flex">
+                        <label for="check">
+                            <input type="checkbox" id="check" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="w-full flex-grow p-4 lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
+                    id="a-nav">
+                    <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
+                        <li class="menu__item mr-3 text-right">
+                            <a class="btn btn-ghost rounded-btn hover:text-blue-700 activeSpy" data-scrollspy="#beranda"
+                                href="#beranda">Beranda</a>
+                        </li>
+                        <li class="menu__item mr-3 text-right">
+                            <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#model"
+                                href="#model">Model</a>
+                        </li>
+                        <li class="menu__item mr-3 text-right">
+                            <a class="btn btn-ghost rounded-btn hover:text-blue-700"
+                                data-scrollspy="#bandingkan-kendaraan" href="#bandingkan-kendaraan">Bandingkan Model</a>
+                        </li>
+                        <li class="menu__item mr-3 text-right">
+                            <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#hubungi-kami"
+                                href="#hubungi-kami">Kontak Kami</a>
+                        </li>
+                        <li class="menu__item mr-3 text-right">
+                            <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#Daftar Harga"
+                                target="_blank" href="pricelist.html">Daftar Harga</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="w-full flex-grow p-4 lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
-                id="a-nav">
-                <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
-                    <li class="mr-3 text-right">
-                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" href="#beranda">Beranda</a>
-                    </li>
-                    <li class="mr-3 text-right">
-                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" href="#model">Model</a>
-                    </li>
-                    <li class="mr-3 text-right">
-                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" href="#bandingkan-kendaraan">Bandingkan Model</a>
-                    </li>
-                    <li class="mr-3 text-right">
-                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" href="#hubungi-kami">Kontak Kami</a>
-                    </li>
-                    <li class="mr-3 text-right">
-                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" target="_blank" href="pricelist.html">Daftar Harga</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="progress" class="h-1 z-40 top-0" style="background:linear-gradient(to right, rgba(224, 231, 255) var(--scroll), transparent 0);"></div>
-    </nav>
+            <div id="progress" class="h-1 z-40 top-0"
+                style="background:linear-gradient(to right, rgba(224, 231, 255) var(--scroll), transparent 0);"></div>
+        </nav>
     </section>
 
-    <section id="beranda">
+    <section id="beranda" class="scrollspy">
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/carry_dekstop.jpg"></div>
-              <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/eritga_dekstop1.jpg"></div>
-              <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/carry_dekstop.jpg"></div>
+                <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/carry_dekstop.jpg"></div>
+                <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/eritga_dekstop1.jpg"></div>
+                <div class="swiper-slide"><img src="https://suzukicdn.net/uploads/news/carry_dekstop.jpg"></div>
             </div>
             <div class="swiper-button-next invisible lg:visible"></div>
             <div class="swiper-button-prev invisible lg:visible"></div>
             <div class="swiper-pagination"></div>
-          </div>
+        </div>
     </section>
 
-    <section id="fitur" class="text-gray-600 body-font bg-base-200" data-theme="emerald">
+    <section id="fitur" class="scrollspy text-gray-600 body-font bg-base-200" data-theme="emerald">
         <div class="container px-5 py-24 mx-auto">
             <div class="grid grid-col md:flex md:flex-wrap -m-2">
-            
+
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <a href="https://api.whatsapp.com/send/?phone=%2B6285245145432&text&app_absent=0" target="_blank" class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
-                            <path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z" />
+                    <a href="https://api.whatsapp.com/send/?phone=%2B6285245145432&text&app_absent=0" target="_blank"
+                        class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                            class="bi bi-gear-wide" viewBox="0 0 16 16">
+                            <path
+                                d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z" />
                         </svg>
                         <div class="flex-grow text-center">
                             <h2 class="text-gray-900 title-font font-medium">Cek Suku Cadang</h2>
@@ -136,9 +147,12 @@
 
                 <!-- Customer Service -->
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <label for="cs" class="cursor-pointer modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16"> 
-                            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+                    <label for="cs"
+                        class="cursor-pointer modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                            class="bi bi-headset" viewBox="0 0 16 16">
+                            <path
+                                d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
                         </svg>
                         <div class="flex-grow text-center">
                             <h2 class="text-gray-900 title-font font-medium">Customer Service</h2>
@@ -149,22 +163,25 @@
                 <input type="checkbox" id="cs" class="modal-toggle">
                 <div class="modal">
                     <div class="modal-box">
-                        <p class="text-gray-800 mb-5 text-xs text-center md:text-base">Pilih platfrom untuk menghubungi kami.</p>
+                        <p class="text-gray-800 mb-5 text-xs text-center md:text-base">Pilih platfrom untuk menghubungi
+                            kami.</p>
                         <div class="grid grid-cols-2 justify-items-center">
-                            <a href="https://api.whatsapp.com/send/?phone=%2B6281257040617&text&app_absent=0" target="_blank" class="flex-1 inset-0 object-center w-full btn btn-kotak">whatsapp</a>
-                            <a href="tel:+6281257040617" class="flex-1 inset-0 object-center w-full btn btn-kotak">Telpon</a>
+                            <a href="https://api.whatsapp.com/send/?phone=%2B6281257040617&text&app_absent=0"
+                                target="_blank" class="flex-1 inset-0 object-center w-full btn btn-kotak">whatsapp</a>
+                            <a href="tel:+6281257040617"
+                                class="flex-1 inset-0 object-center w-full btn btn-kotak">Telpon</a>
                         </div>
                         <div class="modal-action">
                             <label for="cs" class="btn btn-modalNo">Tutup</label>
                         </div>
-                
+
                     </div>
                 </div>
-                
 
-
+                <!-- Emergency Call -->
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <a class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
+                    <a
+                        class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
                             class="bi bi-cone-striped" viewBox="0 0 16 16">
                             <path
@@ -176,15 +193,18 @@
                     </a>
                 </div>
 
+                <!-- Booking Service -->
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <a class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
+                    <a
+                        class="cursor-pointer modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
                             class="bi bi-calendar2-event" viewBox="0 0 16 16">
                             <path
                                 d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
                             <path
                                 d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
-                            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                            <path
+                                d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
                         </svg>
                         <div class="flex-grow text-center">
                             <h2 class="text-gray-900 title-font font-medium">Booking Service</h2>
@@ -192,8 +212,10 @@
                     </a>
                 </div>
 
+                <!-- Pilih Lokasi Dealer -->
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <a class="modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
+                    <label for="dealer"
+                        class="cursor-pointer modal-button card transform hover:scale-105 motion-reduce:transform-none h-full flex items-center bg-white p-4 rounded-lg shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
@@ -203,7 +225,39 @@
                         <div class="flex-grow text-center">
                             <h2 class="text-gray-900 title-font font-medium">Lokasi Dealer</h2>
                         </div>
-                    </a>
+                    </label>
+                </div>
+
+                <input type="checkbox" id="dealer" class="modal-toggle">
+                <div class="modal">
+                    <div class="modal-box">
+                        <div class=" justify-items-center">
+                            <div class="group border border-dashed relative hover:bg-gray-100">
+                                <button class="p-3 w-full focus:outline-none">Pilih Lokasi Dealer</button>
+                                <ul
+                                    class="focus:outline-none bg-white text-gray900 absolute left-0 right-0 transform scale-0 group-hover:scale-100 ">
+                                    <li class="py-1 px-3 hover:bg-blue-500 hover:text-white border-t-2">
+                                        <a href="./singkawang.html" class="btn btn-ghost w-full"><img
+                                                src="./img/LOGO DKU.svg" class=" flex inline-flex "
+                                                style="max-width: 55px" alt=""> DKU Singkawang</a>
+                                    </li>
+                                    <li class="p-1 px-3 hover:bg-blue-500 hover:text-white border-t-2">
+                                        <a href="./ketapang.html" class="btn btn-ghost w-full"><img
+                                                src="./img/LOGO DKU.svg" class=" flex inline-flex "
+                                                style="max-width: 55px" alt="">DKU Ketapang</a>
+                                    </li>
+                                    <li class="p-1 px-3 hover:bg-blue-500 hover:text-white border-t-2 border-b-2">
+                                        <a href="./sintang.html" class="btn btn-ghost w-full"><img
+                                                src="./img/LOGO DKU.svg" class=" flex inline-flex "
+                                                style="max-width: 55px" alt="">DKU Sintang</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-action">
+                            <label for="dealer" class="btn btn-modalNo">Tutup</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
@@ -221,48 +275,53 @@
                         </div>
                     </a>
                 </div>
-          
-        </div>
-        </div>
-      </section>
 
-    <section id="dku" class="hero" data-theme="emerald">
-        <div class="hero w-full flex flex-col bg-base-200">
-            <div class="text-center hero-content">
-              <div class="max-w-md">
-                <h1 class="mb-2 text-xl md:text-3xl font-bold text-gray-600">Suzuki Daya Kharisma Utama</h1> 
-                <h2 class="mb-5 text-lg md:text-2xl font-bold text-gray-600">Pontianak</h2> 
-                    <div class="group hover:border-transparent justify-center transform ">
-                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Sales</button> 
-                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">|</button>
-                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Service</button> 
-                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">|</button>
-                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Spare Part</button> 
-                    </div> 
-                <p class="mb-5 text-sm md:text-base text-gray-600">Dealer resmi Suzuki mobil di Kalimantan Barat</p> 
-              </div>
             </div>
-
-            
-                
         </div>
     </section>
 
-  	<section id="penawaran" class="hero" data-theme="emerald">
-  		<div class="w-full flex flex-col hero bg-base-200">
-  		<div class="hero min-h-screen bg-indigo-100">
-  			<div class="flex-col hero-content lg:flex-row-reverse">
-    		<img src="img/PPKM.jpg" style="width: 600px;" class="max-w-auto rounded-lg shadow-2xl"> 
-    	<div>
-      		<h1 class="mb-5 text-2xl md:text-5xl font-bold text-gray-800">Penawaran Bulan ini</h1> 
-      		<p class="mb-5 text-gray-800">Beli Mobil dapat undian Motor</p> 
-    	</div>
-  			</div>
-		</div>
-		</div>
-  	</section>
+    <section id="dku" class="scrollspy hero" data-theme="emerald">
+        <div class="hero w-full flex flex-col bg-base-200">
+            <div class="text-center hero-content">
+                <div class="max-w-md">
+                    <h1 class="mb-2 text-xl md:text-3xl font-bold text-gray-600">Suzuki Daya Kharisma Utama</h1>
+                    <h2 class="mb-5 text-lg md:text-2xl font-bold text-gray-600">Pontianak</h2>
+                    <div class="group hover:border-transparent justify-center transform ">
+                        <button
+                            class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Sales</button>
+                        <button
+                            class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">|</button>
+                        <button
+                            class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Service</button>
+                        <button
+                            class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">|</button>
+                        <button class="md:btn md:btn-ghost sm:font-semibold text-base md:text-2xl text-gray-600">Spare
+                            Part</button>
+                    </div>
+                    <p class="mb-5 text-sm md:text-base text-gray-600">Dealer resmi Suzuki mobil di Kalimantan Barat</p>
+                </div>
+            </div>
 
-  	<section id="model" class="hero bg-base-200 body-font" data-theme="emerald">
+
+
+        </div>
+    </section>
+
+    <section id="penawaran" class="scrollspy hero" data-theme="emerald">
+        <div class="w-full flex flex-col hero bg-base-200">
+            <div class="hero min-h-screen bg-indigo-100">
+                <div class="flex-col hero-content lg:flex-row-reverse">
+                    <img src="img/PPKM.jpg" style="width: 600px;" class="max-w-auto rounded-lg shadow-2xl">
+                    <div>
+                        <h1 class="mb-5 text-2xl md:text-5xl font-bold text-gray-800">Penawaran Bulan ini</h1>
+                        <p class="mb-5 text-gray-800">Beli Mobil dapat undian Motor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="model" class="scrollspy hero bg-base-200 body-font" data-theme="emerald">
         <div class="md:container bg-base-200 mx-auto">
             <div class="flex flex-col">
                 <div class="text-center flex flex-wrap sm:flex-row flex-col mb-3">
@@ -277,24 +336,29 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="md:flex md:flex-wrap mb-0">
                 <!--XL7-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki XL7</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki XL7
+                    </h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="XL7" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/xl7_thumb2.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 273.300.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        273.300.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/xl7.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://suzukicdn.net/uploads/brochures/XL7.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/xl7.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://suzukicdn.net/uploads/brochures/XL7.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
 
-                   <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
+                    <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-arrow-90deg-down mt-4 mr-2" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -317,21 +381,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--ANE-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki All New Ertiga</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki All
+                        New Ertiga</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="ANE" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/all-new-ertiga-thumb2.jpg">
                     </div>
 
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 251.300.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        251.300.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/all-new-ertiga.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/AllNewErtiga.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/all-new-ertiga.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/AllNewErtiga.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
 
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
@@ -357,20 +426,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--ANE SS-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Ignis</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Ignis</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="ANE SS" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/ertiga-sport-thumb.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 290.300.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        290.300.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-ertiga-ss.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/AllNewErtigaSuzukiSport.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-ertiga-ss.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/AllNewErtigaSuzukiSport.pdf"
+                            target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
 
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
@@ -396,20 +471,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--New Ignis-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Ignis</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Ignis</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="New Ignis" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/Suzuki_Ignis_GX_Hero_Angle_FLIP_1.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 205.600.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        205.600.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-ignis.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/brocure_new_ignis_orange_2.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-ignis.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/brocure_new_ignis_orange_2.pdf"
+                            target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
 
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
@@ -435,20 +516,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--New Baleno-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Baleno</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Baleno</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="New Baleno" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/new-baleno-thumb-2.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 253.500.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        253.500.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-baleno.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/NewBaleno.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-baleno.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/NewBaleno.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -473,20 +559,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--New SX4 S-Cross-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki SX4 S-Cross</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki SX4
+                        S-Cross</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="SX-4 S-Cross" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/sx4.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 312.500.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        312.500.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-scross.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/Scross1.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-scross.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/Scross1.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -511,20 +602,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--Karimun 50 TH-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki Karimun 50 TH AE</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki
+                        Karimun 50 TH AE</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="Karimun 50TH" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/kar502.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 183.400.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        183.400.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-karimun50th.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/Karimun50thAnniversaryEdition.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-karimun50th.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/Karimun50thAnniversaryEdition.pdf"
+                            target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -549,21 +646,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--Karimun Wagon R-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki Karimun Wagon R</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki
+                        Karimun Wagon R</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="Karimun Wagon R"
                             class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/wagon-r-thumb3.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 155.400.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        155.400.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-karimun-wagonr.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/KarimunWagonR.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-karimun-wagonr.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/KarimunWagonR.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -588,20 +690,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--Jimny-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki Jimny</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki Jimny
+                    </h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="jimny" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/jimny-thumb.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 425.800.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        425.800.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-jimny.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/Jimny.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-jimny.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/Jimny.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -626,21 +733,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--APN New Luxury-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV New Luxury</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV
+                        New Luxury</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="APV New Luxury"
                             class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/APV-New-Luxury-thumb1.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 266.000.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        266.000.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-apv-luxury.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/APVNewLuxury.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-apv-luxury.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/APVNewLuxury.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -665,20 +777,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--APV Arena-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV Arena</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV
+                        Arena</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="APV Arena" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/APV-ARENA-thumb.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 220.000.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        220.000.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-apv-arena.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/APVArena.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-apv-arena.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/APVArena.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -704,25 +821,30 @@
                         </button></a>
                 </div>
             </div>
-    
+
             <div class="flex flex-col text-center mb-1">
                 <h2 class="mt-5 tracking-widest text-sm title-font font-medium text-blue-400 mb-1">Commercial Car</h2>
             </div>
-    
+
             <div class="md:flex md:flex-wrap mb-0">
                 <!--New Carry-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Carry</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Carry</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="New Carry" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="https://suzukicdn.net/uploads/automobile/tamnail_rev1.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 172.550.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        172.550.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-carry.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="https://www.suzuki.co.id/uploads/brochures/NewCarryPickup.pdf" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-carry.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="https://www.suzuki.co.id/uploads/brochures/NewCarryPickup.pdf" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -747,20 +869,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--New Carry Box-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Carry Box</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Carry Box</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="New Carry" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="img/Model/New carry box.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 183.100.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        183.100.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-carry-box.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="./404/404.html" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-carry-box.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="./404/404.html" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -785,20 +912,25 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--New Carry Ambulance-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New Carry Ambulance</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki New
+                        Carry Ambulance</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
                         <img alt="New Carry" class="object-contain md:object-scale-down object-center h-full w-full"
                             src="img/Model/new carry ambulance.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp xxx.xxx.xxx</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        xxx.xxx.xxx</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/new-carry-ambulance.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="./404/404.html" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/new-carry-ambulance.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="./404/404.html" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -823,20 +955,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--APV Arena Ambulance-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV Arena Ambulance</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV
+                        Arena Ambulance</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
-                        <img alt="Apc Arena Ambulance" class="object-contain md:object-scale-down object-center h-full w-full"
+                        <img alt="Apc Arena Ambulance"
+                            class="object-contain md:object-scale-down object-center h-full w-full"
                             src="/img/Model/apv ambulance.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp xxx.xxx.xxx</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        xxx.xxx.xxx</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/apv-arena-ambulance.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="./404/404.html" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/apv-arena-ambulance.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="./404/404.html" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -861,20 +999,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--APV Arena Blind Van-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV Arena Blind Van</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki APV
+                        Arena Blind Van</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
-                        <img alt="APV Arena Blind Van" class="object-contain md:object-scale-down object-center h-full w-full"
+                        <img alt="APV Arena Blind Van"
+                            class="object-contain md:object-scale-down object-center h-full w-full"
                             src="img/Model/apvBlindVan.png">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 190.000.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        190.000.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/apv-arena-blindvan.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="./404/404.html" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/apv-arena-blindvan.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="./404/404.html" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -899,20 +1043,26 @@
                             </svg> Telepon
                         </button></a>
                 </div>
-    
+
                 <!--Karimun Blind Van-->
-                <div class="card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
-                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki Karimun Blind Van</h2>
+                <div class="slideup card rounded-none hover:bg-white hover:shadow-lg px-4 md:w-1/3 sm:mb-0 mb-0 shadow-sm" data-aos="zoom-in-up" data-aos-duration="1700">
+                    <h2 class="text-base md:text-lg font-medium title-font text-gray-500 text-center mt-3">Suzuki
+                        Karimun Blind Van</h2>
                     <div class="rounded-lg h-64 overflow-hidden">
-                        <img alt="Karimun Blind Van" class="object-contain md:object-scale-down object-center h-full w-full"
+                        <img alt="Karimun Blind Van"
+                            class="object-contain md:object-scale-down object-center h-full w-full"
                             src="img/Model/wagon-r-blind-van.jpg">
                     </div>
                     <p class="text-base md:text-lg text-gray-800 text-center mt-0">Mulai dari</p>
-                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp 172.400.000</p>
+                    <p class="text-base md:text-2xl italic font-medium title-font text-blue-500 text-center mb-2">Rp
+                        172.400.000</p>
 
                     <div class="grid grid-cols-2">
-                        <a href="./produk/karimun-wagonr-blindvan.html"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
-                        <a href="./404/404.html" target="_blank"><button class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh Brosur</button></a> 
+                        <a href="./produk/karimun-wagonr-blindvan.html"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Jelajahi</button></a>
+                        <a href="./404/404.html" target="_blank"><button
+                                class="btn-kotak rounded-none btn btn-outline my-2 flex items-center mt-auto py-2 px-4 w-full text-sm md:text-base">Unduh
+                                Brosur</button></a>
                     </div>
                     <a class="animate-pulse text-right text-blue-400 inline-flex items-center mt-1 mb-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -941,70 +1091,89 @@
         </div>
     </section>
 
-    <section id="bandingkan-kendaraan" class="hero bg-base-200 pt-4" data-theme="emerald">
+    <section id="bandingkan-kendaraan" class="scrollspy hero bg-base-200 pt-4" data-theme="emerald">
         <div class="container rounded-lg bg-indigo-100 mx-auto">
             <div class="flex flex-col">
                 <div class="text-right flex flex-wrap sm:flex-row flex-col mb-3">
                     <div class="flex flex-col text-center w-full mb-1">
-                        <h1 class="sm:text-3xl text-2xl text-center font-medium title-font mb-4 text-gray-600" data-aos="fade-right"
-                            data-aos-duration="800">Selengkapnya Seputar Kendaraan Suzuki</h1>
+                        <h1 class="sm:text-3xl text-2xl text-center font-medium title-font mb-4 text-gray-600"
+                            data-aos="fade-right" data-aos-duration="800">Selengkapnya Seputar Kendaraan Suzuki</h1>
                         <p class="lg:w-2/3 mx-auto text-center leading-relaxed text-gray-600" data-aos="fade-left"
-                            data-aos-duration="800">Mulai bandingkan kendaraan Suzuki dan Temukan berbagai suku cadang dan aksesoris kendaraan Suzuki Anda.</p>
+                            data-aos-duration="800">Mulai bandingkan kendaraan Suzuki dan Temukan berbagai suku cadang
+                            dan aksesoris kendaraan Suzuki Anda.</p>
                     </div>
                 </div>
 
-            <div class="flex flex-wrap mx-4 my-5 text-center">
-                <div class="sm:w-1/2 mb-10 px-4 flex-1">
-                    <div class="rounded-lg w-full h-64 px-px overflow-hidden bg-center bg-no-repeat bg-cover" style="background-image: url('https://suzukicdn.net/themes/default2019/img/img-dealer.jpg')">
-                        <h2 class="title-font text-2xl font-medium text-white mt-6 md:mt-10 mb-3">BANDINGKAN MOBIL</h2>
-                        <p class="leading-relaxed text-sm md:text-base text-white">Bandingkan dan temukan mobil Suzuki yang sesuai dengan kebutuhan Anda.</p>
-                        <p class="leading-relaxed text-sm md:text-base text-white"></p>
-                        <label for="m-compare" class="mx-auto mt-6 text-white outline-none hover:bg-blue-700 rounded btn btn-kotak modal-button text-sm md:text-base" style="border-color: white; color: white;">mulai bandingkan</label>
-                    
-                        <input type="checkbox" id="m-compare" class="modal-toggle">
-                        <div class="modal">
-                            <div class="modal-box">
-                                <p class="text-gray-800 text-xs md:text-base">Anda akan kami arahkan menuju www.suzuki.co.id untuk informasi lebih lanjut mengenai perbandingan model kendaraan.</p>
-                                <div class="modal-action">
-                                    <a href="https://www.suzuki.co.id/compare?page_source=https://www.suzuki.co.id/automobile" target="_blank"><button for="m-compare" class="btn btn-modalYes">Lanjutkan</button></a>
-                                    <label for="m-compare" class="btn btn-modalNo">Batalkan</label>
+                <div class="flex flex-wrap mx-4 my-5 text-center">
+                    <div class="sm:w-1/2 mb-10 px-4 flex-1">
+                        <div class="rounded-lg w-full h-64 px-px overflow-hidden bg-center bg-no-repeat bg-cover"
+                            style="background-image: url('https://suzukicdn.net/themes/default2019/img/img-dealer.jpg')">
+                            <h2 class="title-font text-2xl font-medium text-white mt-6 md:mt-10 mb-3">BANDINGKAN MOBIL
+                            </h2>
+                            <p class="leading-relaxed text-sm md:text-base text-white">Bandingkan dan temukan mobil
+                                Suzuki yang sesuai dengan kebutuhan Anda.</p>
+                            <p class="leading-relaxed text-sm md:text-base text-white"></p>
+                            <label for="m-compare"
+                                class="mx-auto mt-6 text-white outline-none hover:bg-blue-700 rounded btn btn-kotak modal-button text-sm md:text-base"
+                                style="border-color: white; color: white;">mulai bandingkan</label>
+
+                            <input type="checkbox" id="m-compare" class="modal-toggle">
+                            <div class="modal">
+                                <div class="modal-box">
+                                    <p class="text-gray-800 text-xs md:text-base">Anda akan kami arahkan menuju
+                                        www.suzuki.co.id untuk informasi lebih lanjut mengenai perbandingan model
+                                        kendaraan.</p>
+                                    <div class="modal-action">
+                                        <a href="https://www.suzuki.co.id/compare?page_source=https://www.suzuki.co.id/automobile"
+                                            target="_blank"><button for="m-compare"
+                                                class="btn btn-modalYes">Lanjutkan</button></a>
+                                        <label for="m-compare" class="btn btn-modalNo">Batalkan</label>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-
                     </div>
-                </div>
 
-                <div class="sm:w-1/2 mb-10 px-4 flex-1">
-                    <div class="rounded-lg w-full h-64 px-px overflow-hidden bg-center bg-no-repeat bg-cover" style="background-image: url('https://suzukicdn.net/themes/default2019/img/img-eparts.jpg')">
-                        <h2 class="title-font text:base text-2xl font-medium text-white mt-6 md:mt-10 mb-3">SUKU CADANG & AKSESORIS</h2>
-                        <p class="leading-relaxed text-dark text-sm md:text-base text-white">Dapatkan harga dari berbagai suku cadang dan aksesoris kendaraan Suzuki Anda.</p>
-                        <p class="leading-relaxed text-dark text-sm md:text-base"></p>
-                        <label for="m-sp" class="mx-auto mt-6 text-white outline-none hover:bg-blue-700 rounded btn btn-kotak modal-button text-sm md:text-base" style="border-color: white; color: white;">selengkapnya</label>
-                    
-                        <input type="checkbox" id="m-sp" class="modal-toggle">
-                        <div class="modal">
-                            <div class="modal-box">
-                                <p class="text-gray-800 text-xs md:text-base">Anda akan kami arahkan menuju www.suzuki.co.id untuk informasi lebih lanjut mengenai spare part & aksesoris.</p>
-                                <div class="modal-action">
-                                    <a href="https://www.suzuki.co.id/eparts/" target="_blank"><button for="m-sp" class="btn btn-modalYes">Lanjutkan</button></a>
-                                    <label for="m-sp" class="btn btn-modalNo">Batalkan</label>
+                    <div class="sm:w-1/2 mb-10 px-4 flex-1">
+                        <div class="rounded-lg w-full h-64 px-px overflow-hidden bg-center bg-no-repeat bg-cover"
+                            style="background-image: url('https://suzukicdn.net/themes/default2019/img/img-eparts.jpg')">
+                            <h2 class="title-font text:base text-2xl font-medium text-white mt-6 md:mt-10 mb-3">SUKU
+                                CADANG & AKSESORIS</h2>
+                            <p class="leading-relaxed text-dark text-sm md:text-base text-white">Dapatkan harga dari
+                                berbagai suku cadang dan aksesoris kendaraan Suzuki Anda.</p>
+                            <p class="leading-relaxed text-dark text-sm md:text-base"></p>
+                            <label for="m-sp"
+                                class="mx-auto mt-6 text-white outline-none hover:bg-blue-700 rounded btn btn-kotak modal-button text-sm md:text-base"
+                                style="border-color: white; color: white;">selengkapnya</label>
+
+                            <input type="checkbox" id="m-sp" class="modal-toggle">
+                            <div class="modal">
+                                <div class="modal-box">
+                                    <p class="text-gray-800 text-xs md:text-base">Anda akan kami arahkan menuju
+                                        www.suzuki.co.id untuk informasi lebih lanjut mengenai spare part & aksesoris.
+                                    </p>
+                                    <div class="modal-action">
+                                        <a href="https://www.suzuki.co.id/eparts/" target="_blank"><button for="m-sp"
+                                                class="btn btn-modalYes">Lanjutkan</button></a>
+                                        <label for="m-sp" class="btn btn-modalNo">Batalkan</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    
-                    </div>
-                </div>
 
-        </div>
+                        </div>
+                    </div>
+
+                </div>
     </section>
 
-    <section id="hubungi-kami" class="hero bg-base-200" data-theme="emerald">
+    <section id="hubungi-kami" class="scrollspy hero bg-base-200" data-theme="emerald">
         <div class="container px-5 py-5 mx-auto">
             <div class="flex flex-col text-center w-full mb-5">
                 <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-800" data-aos="fade-up"
                     data-aos-duration="800">Kontak Kami</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-800" data-aos="fade-up" data-aos-duration="800">Punya
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-800" data-aos="fade-up"
+                    data-aos-duration="800">Punya
                     pertanyaan seputar kendaraan Anda. Hubungi Kami
                     segera</p>
 
@@ -1014,9 +1183,10 @@
                         data-aos-anchor-placement="center-bottom">
                         <div
                             class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
-                                <h1 class="text-center text-2xl text-gray-600 pb-4 mb-4 border-b border-indigo-200 leading-none">
-                                    Booking Service</h1>
-                                <!--<p class="flex items-center text-sm text-gray-600 mb-2">
+                            <h1
+                                class="text-center text-2xl text-gray-600 pb-4 mb-4 border-b border-indigo-200 leading-none">
+                                Booking Service</h1>
+                            <!--<p class="flex items-center text-sm text-gray-600 mb-2">
                                     <span
                                         class="w-4 h-4 mr-2 inline-flex items-center justify-center text-xs text-gray-600 flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1047,27 +1217,26 @@
                                     </span class="text-sm">Bawa kendaraan Anda ke bengkel Suzuki DKU
                                 </p>-->
 
-                                <p class="text-xs text-gray-600 mt-3 mb-2">Hubungi Sekarang.</p>
-                                <a href="https://api.whatsapp.com/send/?phone=%2B6281257040617&text&app_absent=0"
-                                    target="_blank">
-                                    <button
-                                        class="btn btn-kontak my-2 flex items-center mt-auto border-0 py-2 px-4 w-full ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-whatsapp mr-5 anime" viewBox="0 0 16 16">
-                                            <path
-                                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                                        </svg> Whatsapp
-                                    </button></a>
-                                <a href="tel:081257040617" target="_blank">
-                                    <button
-                                        class="btn btn-kontak my-2 flex items-center mt-auto border-0 py-2 px-4 w-full ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-telephone-outbound mr-5 anime"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
-                                        </svg> Telepon
-                                    </button></a>
+                            <p class="text-xs text-gray-600 mt-3 mb-2">Hubungi Sekarang.</p>
+                            <a href="https://api.whatsapp.com/send/?phone=%2B6281257040617&text&app_absent=0"
+                                target="_blank">
+                                <button
+                                    class="btn btn-kontak my-2 flex items-center mt-auto border-0 py-2 px-4 w-full ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-whatsapp mr-5 anime" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                    </svg> Whatsapp
+                                </button></a>
+                            <a href="tel:081257040617" target="_blank">
+                                <button
+                                    class="btn btn-kontak my-2 flex items-center mt-auto border-0 py-2 px-4 w-full ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-telephone-outbound mr-5 anime" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+                                    </svg> Telepon
+                                </button></a>
 
                         </div>
                     </div>
@@ -1272,63 +1441,75 @@
         </div>
     </section>
 
-    <section id="maps" class="text-gray-600 body-font relative bg-white">
+    <section id="maps" class="scrollspy text-gray-600 body-font relative bg-white">
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-          <div class="lg:w-2/3 md:w-1/2 bg-white rounded-lg shadow-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnTTcqSgRXt-kNBj_RLSLVQRxzgGqKm7s&q=suzuki%20daya%20kharisma%20utam%20pontianak&" style="filter: grayscale(0) contrast(1.1) opacity(0.9);"></iframe>
-            <div class="mt-40 md:mt-0 md:ml-6 md:inline-flex md:self-end md:flex-1 md:max-w-2xl bg-white relative flex flex-wrap py-6 rounded shadow-md">
-              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Alamat</h2>
-                <p class="text-xs md:text-base mt-1">Jalan Ahmad Yani No.77 Pontianak</p>
-                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Fax</h2>
-                <p class="text-xs md:text-base leading-relaxed">(0561) 738-855</p>
-              </div>
-              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Email</h2>
-                <a class="text-xs md:text-base text-indigo-500 leading-relaxed">suzukidayamotor@gmail.com</a>
-                <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Telpon</h2>
-                <p class="text-xs md:text-base leading-relaxed">(0561) 741-999</p>
-              </div>
+            <div
+                class="lg:w-2/3 md:w-1/2 bg-white rounded-lg shadow-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+                    marginwidth="0" scrolling="no"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBnTTcqSgRXt-kNBj_RLSLVQRxzgGqKm7s&q=suzuki%20daya%20kharisma%20utam%20pontianak&"
+                    style="filter: grayscale(0) contrast(1.1) opacity(0.9);"></iframe>
+                <div
+                    class="mt-40 md:mt-0 md:ml-6 md:inline-flex md:self-end md:flex-1 md:max-w-2xl bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                    <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Alamat</h2>
+                        <p class="text-xs md:text-base mt-1">Jalan Ahmad Yani No.77 Pontianak</p>
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Fax</h2>
+                        <p class="text-xs md:text-base leading-relaxed">(0561) 738-855</p>
+                    </div>
+                    <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Email</h2>
+                        <a class="text-xs md:text-base text-indigo-500 leading-relaxed">suzukidayamotor@gmail.com</a>
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Telpon</h2>
+                        <p class="text-xs md:text-base leading-relaxed">(0561) 741-999</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="py-0 md:py-5 rounded shadow-md flex-1 md:relative mb-4 ">
-              <div class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                  <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                      <h2 class="text-gray-900 text-2xl title-font font-medium mb-2">Lokasi Kami</h2>
-                      <p class="leading-relaxed text-base">Kunjungi showroom Suzuki Daya Kharisma Utama Pontianak.</p>
-                  </div>
-              </div>
+            <div class="py-0 md:py-5 rounded shadow-md flex-1 md:relative mb-4 ">
+                <div
+                    class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                        <h2 class="text-gray-900 text-2xl title-font font-medium mb-2">Lokasi Kami</h2>
+                        <p class="leading-relaxed text-base">Kunjungi showroom Suzuki Daya Kharisma Utama Pontianak.</p>
+                    </div>
+                </div>
 
-              <div class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                  <div class="flex-grow sm:text-left text-center mt-0 md:mt-6 sm:mt-0">
-                    <p class="leading-relaxed text-base">Bicarakan langsung keinginan Anda langsung ke sales kami.</p>
-                  </div>
-              </div>
-              
-              <div class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                  <div class="flex-grow sm:text-left text-center mt-4 sm:mt-0">
-                      <p class="leading-relaxed text-base">Interaksi langsung dengan kendaraan fisik di showroom.</p>
-                  </div>
-              </div>
+                <div
+                    class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                    <div class="flex-grow sm:text-left text-center mt-0 md:mt-6 sm:mt-0">
+                        <p class="leading-relaxed text-base">Bicarakan langsung keinginan Anda langsung ke sales kami.
+                        </p>
+                    </div>
+                </div>
 
-              <div class="flex items-center lg:w-4/5 mx-auto sm:flex-row flex-col">
-                  <div class="flex-grow sm:text-left text-center mt-4 sm:mt-0">
-                      <p class="leading-relaxed text-base mb-4">Test drive kendaraan impian anda.</p>
-                  </div>
-              </div>
-          </div>
+                <div
+                    class="flex items-center lg:w-4/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                    <div class="flex-grow sm:text-left text-center mt-4 sm:mt-0">
+                        <p class="leading-relaxed text-base">Interaksi langsung dengan kendaraan fisik di showroom.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center lg:w-4/5 mx-auto sm:flex-row flex-col">
+                    <div class="flex-grow sm:text-left text-center mt-4 sm:mt-0">
+                        <p class="leading-relaxed text-base mb-4">Test drive kendaraan impian anda.</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
         </div>
-      </section>
+    </section>
 
-    <a href="#" class="crunchify-top"><span class="top-arrow text-indigo-300"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-      </svg></span></a>
+    <a href="#" class="crunchify-top"><span class="top-arrow text-indigo-300"><svg xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            </svg></span></a>
 
     <footer id="footer" class="bg-gray-100 text-gray-800 body-font" data-theme="emerald">
-        <div class="container px-2 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div
+            class="container px-2 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
             <div class="w-70 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                 <a class="flex title-font font-medium items-center md:justify-start justify-center text-dark">
                     <img src="img/favicon.svg" style="max-width: 40px;">
@@ -1349,7 +1530,8 @@
                     <h2 class="title-font font-medium text-dark tracking-widest text-sm mb-3">Cabang Kami</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/singkawang/">Singkawang</a>
+                            <a class="text-dark-400 hover:text-dark"
+                                href="https://www.dku.id/singkawang/">Singkawang</a>
                         </li>
                         <li>
                             <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/ketapang/">Ketapang</a>
@@ -1387,50 +1569,82 @@
         </div>
     </section>
 
-</div><!-- content -->
+    </div><!-- content -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/vanillajs-scrollspy.min.js"></script>
 
     <script>
-        var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+        var nodeArray = [
+            document.querySelector('#beranda'),
+            document.querySelector('#fitur'),
+            document.querySelector('#dku'),
+            document.querySelector('#penawaran'),
+            document.querySelector('#model'),
+            document.querySelector('#bandingkan-kendaraan'),
+            document.querySelector('#hubungi-kami'),
+            document.querySelector('#maps'),
+            document.querySelector('#footer'),
+            document.querySelector('#copyright'),
+        ];
+
+        var slideUp = {
+            duration: 1000,
+            distance: '150%',
+            origin: 'bottom',
+            opacity: null,
+            reset: false
+            
+        };
+
+        const reveal = {
+            duration: 300,
+            reset: true
+        }
+
+        ScrollReveal().reveal(nodeArray);
+        ScrollReveal().reveal('.slideup');
     </script>
 
     <script>
-        $(function () {
-            AOS.init();
-        });
+        window.onload = function () {
+            scrollSpy('#a-nav', {
+                offset: 0, // in pixels
+                menuActiveTarget: 'li > a',
+                sectionClass: '.scrollspy',
+                activeClass: 'activeSpy',
+                scrollContainer: ''
+            });
+        };
+    </script>
 
-        $(window).on('load', function () {
-            AOS.refresh();
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
 
     <script>
         document.getElementById('check').onclick = function () {
             document.getElementById("a-nav").classList.toggle("hidden");
-            document.getElementById("a-nav").classList.add("bg-gray-100");
-            document.getElementById("header").classList.add("bg-gray-100");
+            document.getElementById("header").classList.add("bg-gray-100-nav");
         }
 
         document.getElementById('a-nav').onclick = function () {
@@ -1440,61 +1654,32 @@
 
     <script>
         var h = document.documentElement,
-        b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight',
-        progress = document.querySelector('#progress'),
-        scroll;
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight',
+            progress = document.querySelector('#progress'),
+            scroll;
         var scrollpos = window.scrollY;
         var header = document.getElementById("header");
         var navcontent = document.getElementById("a-nav");
 
 
-        document.addEventListener('scroll', function () { 
+        document.addEventListener('scroll', function () {
             scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
             progress.style.setProperty('--scroll', scroll + '%');
             scrollpos = window.scrollY;
 
             if (scrollpos > 10) {
-                header.classList.add("bg-gray-100");
-                navcontent.classList.add("bg-gray-100");
+                header.classList.add("bg-gray-100-nav");
             } else {
-                header.classList.remove("bg-gray-100");
-                navcontent.classList.remove("bg-gray-100");
+                header.classList.remove("bg-gray-100-nav");
+                navcontent.classList.remove("bg-gray-100-nav");
 
             }
 
         });
-
-    </script>                                           
-
-    <script>
-        // Add smooth scrolling on all links inside the navbar
-        $("#header a").on('click', function (event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if ($(this.hash + ', a[name="' + this.hash.substr(1) + '"]')) {
-
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                    $("#header ul li a[href^='#']").on('click', function(e) {
-                        e.preventDefault();
-                        $('html, body').animate({ 
-                            scrollTop: $(this.hash).offset().top - $('#header').height()
-                        }, 600);
-
-                        window.location.hash = hash;
-
-                    });
-                
-            } // End if
-
-        });
     </script>
+
 
     <!-- Crunchify's Scroll to Top Script -->
     <script>
@@ -1519,5 +1704,7 @@
         });
     </script>
 
+
 </body>
+
 </html>
