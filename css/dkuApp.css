@@ -1,4 +1,10 @@
 /* Global Style */
+@media (max-width: 748px) {
+    .compare {
+        min-width: 100%;
+    }
+}
+
 .btn {
     background-color: transparent;
 }
