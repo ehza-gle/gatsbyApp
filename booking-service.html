@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no">
+    <title>Suzuki Pontianak - Daya Kharisma Utama</title>
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/daisyUI.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="./css/dkuApp.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body translate="no" class="bg-white">
+
+  <section class="hero">
+    <nav id="header" class="navbar fixed bg-transparent text-white w-full z-20 top-0">
+        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-px">
+            <div class="flex pl-8 p-2 pt-px">
+                <a class="text-dark no-underline hover:text-white hover:no-underline" href="https://dku.id">
+                    <img src="img/favicon.svg" alt="Suzuki DKU" style="width: 100px;">
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <div id="animate-toogle" class="flex">
+                    <label for="check">
+                        <input type="checkbox" id="check" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="w-full flex-grow p-4 lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
+                id="a-nav">
+                <ul id="a-nav" class="list-reset lg:flex justify-center flex-1 items-center">
+                    <li class="menu__item mr-3 text-right">
+                        <a class="btn btn-ghost rounded-btn hover:text-blue-700 activeSpy" data-scrollspy="#beranda"
+                            href="./index.html#beranda">Beranda</a>
+                    </li>
+                    <li class="menu__item mr-3 text-right">
+                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#model"
+                            href="./index.html#model">Model</a>
+                    </li>
+                    <li class="menu__item mr-3 text-right">
+                        <a class="btn btn-ghost rounded-btn hover:text-blue-700"
+                            data-scrollspy="#bandingkan-kendaraan" href="./index.html#bandingkan-kendaraan">Bandingkan Model</a>
+                    </li>
+                    <li class="menu__item mr-3 text-right">
+                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#hubungi-kami"
+                            href="./index.html#hubungi-kami">Kontak Kami</a>
+                    </li>
+                    <li class="menu__item mr-3 text-right">
+                        <a class="btn btn-ghost rounded-btn hover:text-blue-700" data-scrollspy="#Daftar Harga"
+                            target="_blank" href="pricelist.html">Daftar Harga</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="progress" class="h-1 z-40 top-0"
+            style="background:linear-gradient(to right, rgba(224, 231, 255) var(--scroll), transparent 0);"></div>
+    </nav>
+</section>
+
+<section>
+  <img src="https://suzukicdn.net/themes/default2019/img/service/hero-automobile.jpg" class="w-full " alt="">
+</section>
+
+<section id="breadchumb" class="bg-sky">
+  <div class="flex justify-center btn-navigasi ">
+      <ul class="flex text-gray-700 text-xs lg:text-base font-bold">
+          <li class="inline-flex items-center ">
+            <a href="/">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+          </a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 w-auto text-gray-700 mx-px md:mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </li>
+          <li class="inline-flex items-center">
+            <a href="#" class="active">Booking Service</a>
+          </li>
+        </ul>
+
+  </div>
+</section>
+
+<section>
+    <!-- Container -->
+    <div class=" mx-auto">
+      <div class="flex justify-center px-6 my-12">
+        <!-- Row -->
+        <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+          <div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
+						style="background-image: url('https://suzukicdn.net/themes/default2019/img/service/hero-automobile.jpg')"
+					></div>
+          <!-- Col -->
+          <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none  shadow-lg">
+            <h3 class="pt-4 text-2xl text-center text-gray-900">BOOKING SERVICE</h3>
+            <form id="booking-service" action="https://getform.io/f/b3df3532-b7e2-4d4d-8a32-4e0b44094f70" method="post"  class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="nama">
+                  Nama
+                </label>
+                <input
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="nama" id="nama" type="text" placeholder="Nama Lengkap"  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="tel">
+                  Nomor Telpon
+                </label>
+                <input
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="nomor-telpon" id="tel" type="tel" placeholder="Nomor Telpon / Whatsapp" required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+                  Email
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="email" id="email" type="email" placeholder="Alamat Email" required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="lokasi-service">Pilih Lokasi</label>
+                <select
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="lokasi-service" required >
+                  <option value="pontianak">Pontianak</option>
+                  <option value="singkawang">Singkawang</option>
+                  <option value="ketapang">Ketapang</option>
+                  <option value="sintang">Sintang</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="model-kendaraan">Pilih Model Kendaraan</label>
+                <select name="model-kendaraan"
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  required>
+                  <option value="">Pilih Model Kendaraan</option>
+                  <option value="All New Ertiga">All New Ertiga</option>
+                  <option value="All New Swift">All New Swift</option>
+                  <option value="All New Swift GS">All New Swift GS</option>
+                  <option value="APV">APV</option>
+                  <option value="APV Aren">APV Arena</option>
+                  <option value="APV New Luxury">APV New Luxury</option>
+                  <option value="Baleno">Baleno</option>
+                  <option value="Baleno Next G">Baleno Next G</option>
+                  <option value="Carry Minibus">Carry Minibus</option>
+                  <option value="Carry Pick Up">Carry Pick Up</option>
+                  <option value="Carry PU Flat Deck">Carry PU Flat Deck</option>
+                  <option value="Carry PU Flat Deck">Carry PU Flat Deck</option>
+                  <option value="Carry PU Wide Deck">Carry PU Wide Deck</option>
+                  <option value="Carry Real Van">Carry Real Van</option>
+                  <option value="Celerio">Celerio</option>
+                  <option value="Ciaz">Ciaz</option>
+                  <option value="Ertiga">Ertiga</option>
+                  <option value="Ertiga Dreza">Ertiga Dreza</option>
+                  <option value="Escudo">Escudo</option>
+                  <option value="Grand Vitara 2.4">Grand Vitara 2.4</option>
+                  <option value="Ignis">Ignis</option>
+                  <option value="Ignis Sport Edition">Ignis Sport Edition</option>
+                  <option value="Jimny (2017)">Jimny (2017)</option>
+                  <option value="Karimun 50th Anniversary Edition">Karimun 50th Anniversary Edition</option>
+                  <option value="Karimun Estilo">Karimun Estilo</option>
+                  <option value="Karimun New Estilo">Karimun New Estilo</option>
+                  <option value="Karimun Wagon R">Karimun Wagon R</option>
+                  <option value="Karimun Wagon R GS">Karimun Wagon R GS</option>
+                  <option value="Mega Carry Pick Up">Mega Carry Pick Up</option>
+                  <option value="Mega Carry Xtra Pick Up">Mega Carry Xtra Pick Up</option>
+                  <option value="Neo Baleno">Neo Baleno</option>
+                  <option value="New Baleno">New Baleno</option>
+                  <option value="New Ertiga">New Ertiga</option>
+                  <option value="New Ertiga Diesel Hybrid">New Ertiga Diesel Hybrid</option>
+                  <option value="New Escudo">New Escudo</option>
+                  <option value="New Grand Vitara 2.4">New Grand Vitara 2.4</option>
+                  <option value="New Ignis">New Ignis</option>
+                  <option value="New SX4 S-Cross">New SX4 S-Cross</option>
+                  <option value="Splash">Splash</option>
+                  <option value="Swift Spor">Swift Sport</option>
+                  <option value="SX 4">SX 4</option>
+                  <option value="SX4 S-Cross">SX4 S-Cross</option>
+                  <option value="XL7">XL7</option>
+                  <option value="XL7x">XL7x</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="tipe-kendaraan">
+                  Tipe Kendaraan
+                </label>
+                <input
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="tipe-kendaraan" id="tipe-kendaraan" type="text" placeholder="Tipe Mobil Suzuki Anda" required />
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="nomor-polisi">
+                  Nomor Polisi
+                </label>
+                <input
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  name="nomor-polisi " id="nomor-polisi" type="text" placeholder="Nomor Plat Kendaraan" required />
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="jenis-service">Pilih Jenis Service</label>
+                <select name="jenis-service"
+                  class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  required>
+                  <option value="">Pilih Layanan</option>
+                  <option value="gratis 1">Servis Gratis 1 (1.000 Km / 1 Bulan)</option>
+                  <option value="gratis 2">Servis Gratis 2 (10.000 Km / 6 Bulan)</option>
+                  <option value="gratis 3">Servis Gratis 3 (20.000 Km / 12 Bulan)</option>
+                  <option value="gratis 4">Servis Gratis 4 (30.000 Km / 18 Bulan)</option>
+                  <option value="gratis 5">Servis Gratis 5 (40.000 Km / 24 Bulan)</option>
+                  <option value="gratis 6">Servis Gratis 6 (50.000 Km / 30 Bulan)</option>
+                  <option value="Paket A">Paket A (Kelipatan 5.000 Km / 3 Bulan)</option>
+                  <option value="Paket B">Paket B (Kelipatan 10.000 Km / 6 Bulan)</option>
+                  <option value="Paket C">Paket C (Kelipatan 20.000 Km / 12 Bulan)</option>
+                  <option value="Paket D">Paket D (Kelipatan 40.000 Km / 18 Bulan)</option>
+                </select>
+              </div>
+
+              <div class="mb-4 md:flex md:justify-between">
+                <div class="mb-4 md:mr-2 md:mb-0">
+                  <label class="block mb-2 text-sm font-bold text-gray-700" for="tanggal">Tanggal Service</label>
+                  <input type="date" id="tanggal" name="tanggal" required
+                    class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+                  </input>
+                </div>
+                <div class="md:ml-2">
+                  <label class="block mb-2 text-sm font-bold text-gray-700" for="jam">Waktu</label>
+                  <select name="jam"
+                    class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    required>
+                    <option value="">Pilih jam servis</option>
+                    <option value="06:00">06:00</option>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="mb-6 text-center">
+                <button
+                  class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                  type="submit">
+                  Kirim
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="crunchify-top"><span class="top-arrow text-indigo-300"><svg xmlns="http://www.w3.org/2000/svg"
+    width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+    <path
+        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+  </svg></span></a>
+
+  <footer id="footer" class="bg-gray-100 text-gray-800 body-font" data-theme="emerald">
+  <div
+  class="container px-2 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  <div class="w-70 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-dark">
+          <img src="img/favicon.svg" style="max-width: 40px;">
+          <span class="ml-3 text-lg md:text-xl">Daya Kharisma Utama Pontianak</span>
+      </a>
+      <p class="mt-2 text-sm text-dark-500">Jalan Ahmadyani No. 77</p>
+      <p class="mt-2 text-sm text-dark-500">Telp (sales) : 0561-742-333</p>
+      <p class="mt-2 text-sm text-dark-500">Telp (after-sales) : 0561-741-999</p>
+  </div>
+  <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-right text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-dark tracking-widest text-sm mb-3">Cabang Kami</h2>
+          <nav class="list-none mb-10">
+              <li>
+                  <a class="text-dark-400 hover:text-dark"
+                      href="https://www.dku.id/singkawang/">Singkawang</a>
+              </li>
+              <li>
+                  <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/ketapang/">Ketapang</a>
+              </li>
+              <li>
+                  <a class="text-dark-400 hover:text-dark" href="https://www.dku.id/sintang/">Sintang</a>
+              </li>
+          </nav>
+          <!--Sosial Media-->
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="text-dark-400" href="https://www.facebook.com/suzuki.dku/" target="_blank">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+              </a>
+              <a class="ml-3 text-dark-400" href="https://www.instagram.com/suzuki.dku/" target="_blank">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+              </a>
+          </span>
+      </div>
+  </div>
+  </div>
+  </footer>
+
+  <section id="copyright">
+  <div class="bg-gray-600 bg-opacity-75">
+  <div class="container place-content-center mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-dark-400 text-sm text-center sm:text-left">© 2021 Suzuki Daya Kharisma Utama</p>
+  </div>
+  </div>
+  </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/vanillajs-scrollspy.min.js"></script>
+
+    <script>
+        var nodeArray = [
+            document.querySelector('#beranda'),
+            document.querySelector('#fitur'),
+            document.querySelector('#dku'),
+            document.querySelector('#penawaran'),
+            document.querySelector('#model'),
+            document.querySelector('#bandingkan-kendaraan'),
+            document.querySelector('#hubungi-kami'),
+            document.querySelector('#maps'),
+            document.querySelector('#footer'),
+            document.querySelector('#copyright'),
+        ];
+
+        var slideUp = {
+            duration: 1000,
+            distance: '150%',
+            origin: 'bottom',
+            opacity: null,
+            reset: false
+            
+        };
+
+        const reveal = {
+            duration: 300,
+            reset: true
+        }
+
+        ScrollReveal().reveal(nodeArray);
+        ScrollReveal().reveal('.slideup');
+    </script>
+
+    <script>
+        window.onload = function () {
+            scrollSpy('#a-nav', {
+                offset: 0, // in pixels
+                menuActiveTarget: 'li > a',
+                sectionClass: '.scrollspy',
+                activeClass: 'activeSpy',
+                scrollContainer: ''
+            });
+        };
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <script>
+        document.getElementById('check').onclick = function () {
+            document.getElementById("a-nav").classList.toggle("hidden");
+            document.getElementById("header").classList.add("bg-gray-100-nav");
+        }
+
+        document.getElementById('a-nav').onclick = function () {
+            document.getElementById("check").click();
+        }
+    </script>
+
+    <script>
+        var h = document.documentElement,
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight',
+            progress = document.querySelector('#progress'),
+            scroll;
+        var scrollpos = window.scrollY;
+        var header = document.getElementById("header");
+        var navcontent = document.getElementById("a-nav");
+
+
+        document.addEventListener('scroll', function () {
+            scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+            progress.style.setProperty('--scroll', scroll + '%');
+            scrollpos = window.scrollY;
+
+            if (scrollpos > 10) {
+                header.classList.add("bg-gray-100-nav");
+            } else {
+                header.classList.remove("bg-gray-100-nav");
+                navcontent.classList.remove("bg-gray-100-nav");
+
+            }
+
+        });
+    </script>
+
+
+    <!-- Crunchify's Scroll to Top Script -->
+    <script>
+        jQuery(document).ready(function () {
+            const offset = 500;
+            const duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.crunchify-top').fadeIn(duration);
+                } else {
+                    jQuery('.crunchify-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.crunchify-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({
+                    scrollTop: 0
+                }, duration);
+                return false;
+            })
+        });
+    </script>
+
+  </body>
+</html>

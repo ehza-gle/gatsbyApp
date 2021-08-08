@@ -1,4 +1,8 @@
 /* Global Style */
+.btn {
+    background-color: transparent;
+}
+
 .btn-navigasi {
     margin: auto;
     left: 50%;
@@ -89,6 +93,10 @@
     background: white;
 }
 
+.modal .btn-kotak {
+    color: black;
+}
+
 .bg-sky {
     background: #ECE9E6;
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
@@ -170,12 +178,13 @@
     background-color: rgb(59, 130, 246);
     border-color: rgb(59, 130, 246);
     color: white;
-    border-radius: 10px;
+    border-radius: 0px;
     transition: all .5s ease-in-out;
 }
 
 .btn-modalYes:hover {
     background: rgb(10, 88, 214);
+    border-color: rgb(10, 88, 214);
     color: white;
 }
 
