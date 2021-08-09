@@ -1,4 +1,8 @@
 /* Global Style */
+body {
+    background-color: white;
+}
+
 @media (max-width: 748px) {
     .compare {
         min-width: 100%;
